@@ -1,0 +1,266 @@
+{
+  "CoursewareList": {
+    "Courseware": [
+      {
+        "Name": "腹部触诊",
+        "TreeDir": "/腹部触诊",
+        "Courseware": [
+          {
+            "Name": "基础知识",
+            "TreeDir": "/腹部触诊/基础知识",
+            "Courseware": [
+              {
+                "Name": "腹部体表标志",
+                "TreeDir": "/腹部触诊/基础知识/腹部体表标志",
+                "Flash": "腹部体表标志.swf",
+                "NetID": ""
+              },
+              {
+                "Name": "腹部分区",
+                "TreeDir": "/腹部触诊/基础知识/腹部分区",
+                "Flash": "腹部体表分区.swf",
+                "NetID": ""
+              },
+              {
+                "Name": "腹部触诊方法",
+                "TreeDir": "/腹部触诊/基础知识/腹部触诊方法",
+                "Flash": "腹部触诊方法.swf",
+                "NetID": ""
+              },
+              {
+                "Name": "腹部触诊注意事项",
+                "TreeDir": "/腹部触诊/基础知识/腹部触诊注意事项",
+                "Flash": "腹部触诊注意事项.swf",
+                "NetID": ""
+              }
+            ]
+          },
+          {
+            "Name": "腹部触诊内容",
+            "TreeDir": "/腹部触诊/腹部触诊内容",
+            "Courseware": [
+              {
+                "Name": "脏器触诊",
+                "TreeDir": "/腹部触诊/腹部触诊内容/脏器触诊",
+                "Courseware": [
+                  {
+                    "Name": "肝脏触诊",
+                    "TreeDir": "/腹部触诊/腹部触诊内容/脏器触诊/肝脏触诊",
+                    "Courseware": [
+                      {
+                        "Name": "触诊机理",
+                        "TreeDir": "/腹部触诊/腹部触诊内容/脏器触诊/肝脏触诊/触诊机理",
+                        "Flash": "(肝脏)触诊机理.swf",
+                        "NetID": "48850",
+                        "defalut_sound": ""
+                      },
+                      {
+                        "Name": "触诊方法",
+                        "TreeDir": "/腹部触诊/腹部触诊内容/脏器触诊/肝脏触诊/触诊方法",
+                        "Flash": "(肝脏)触诊方法.swf",
+                        "NetID": "48851",
+                        "defalut_sound": ""
+                      },
+                      {
+                        "Name": "常见错误",
+                        "TreeDir": "/腹部触诊/腹部触诊内容/脏器触诊/肝脏触诊/常见错误",
+                        "Flash": "肝触诊常见错误.swf",
+                        "NetID": "48852",
+                        "defalut_sound": ""
+                      },
+                      {
+                        "Name": "触诊内容及临床意义",
+                        "TreeDir": "/腹部触诊/腹部触诊内容/脏器触诊/肝脏触诊/触诊内容及临床意义",
+                        "Flash": "(肝脏)触诊内容及临床意义.swf",
+                        "NetID": "48853",
+                        "defalut_sound": ""
+                      }
+                    ]
+                  },
+                  {
+                    "Name": "脾脏触诊",
+                    "TreeDir": "/腹部触诊/腹部触诊内容/脏器触诊/脾脏触诊",
+                    "Courseware": [
+                      {
+                        "Name": "触诊方法",
+                        "TreeDir": "/腹部触诊/腹部触诊内容/脏器触诊/脾脏触诊/触诊方法",
+                        "Flash": "(脾脏)触诊方法.swf",
+                        "NetID": "48854",
+                        "defalut_sound": ""
+                      },
+                      {
+                        "Name": "技能掌握关键点",
+                        "TreeDir": "/腹部触诊/腹部触诊内容/脏器触诊/脾脏触诊/技能掌握关键点",
+                        "Flash": "技能掌握关键点.swf",
+                        "NetID": "48855",
+                        "defalut_sound": ""
+                      },
+                      {
+                        "Name": "脾肿大测试",
+                        "TreeDir": "/腹部触诊/腹部触诊内容/脏器触诊/脾脏触诊/脾肿大测试",
+                        "Flash": "脾肿大测试.swf",
+                        "NetID": "48857",
+                        "defalut_sound": ""
+                      },
+                      {
+                        "Name": "触诊内容及临床意义",
+                        "TreeDir": "/腹部触诊/腹部触诊内容/脏器触诊/脾脏触诊/触诊内容及临床意义",
+                        "Flash": "(脾)触诊内容及临床意义.swf",
+                        "NetID": "48858",
+                        "defalut_sound": ""
+                      }
+                    ]
+                  },
+                  {
+                    "Name": "胆囊触诊",
+                    "TreeDir": "/腹部触诊/腹部触诊内容/脏器触诊/胆囊触诊",
+                    "Courseware": [
+                      {
+                        "Name": "触诊机理",
+                        "TreeDir": "/腹部触诊/腹部触诊内容/脏器触诊/胆囊触诊/触诊机理",
+                        "Flash": "(胆囊)触诊机理.swf",
+                        "NetID": "48859",
+                        "defalut_sound": ""
+                      },
+                      {
+                        "Name": "胆囊肿大的触诊",
+                        "TreeDir": "/腹部触诊/腹部触诊内容/脏器触诊/胆囊触诊/胆囊肿大的触诊",
+                        "Flash": "胆囊肿大的触诊.swf",
+                        "NetID": "48860",
+                        "defalut_sound": ""
+                      },
+                      {
+                        "Name": "Murphy征与胆囊触痛检查方法",
+                        "TreeDir": "/腹部触诊/腹部触诊内容/脏器触诊/胆囊触诊/Murphy征与胆囊触痛检查方法",
+                        "Flash": "Murphy征与胆囊触痛检查方法.swf",
+                        "NetID": "48861",
+                        "defalut_sound": ""
+                      },
+                      {
+                        "Name": "临床意义",
+                        "TreeDir": "/腹部触诊/腹部触诊内容/脏器触诊/胆囊触诊/临床意义",
+                        "Flash": "(胆囊)临床意义.swf",
+                        "NetID": "48862",
+                        "defalut_sound": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "Name": "腹部包块",
+                "TreeDir": "/腹部触诊/腹部触诊内容/腹部包块",
+                "Courseware": [
+                  {
+                    "Name": "正常腹部可触到的包块",
+                    "TreeDir": "/腹部触诊/腹部触诊内容/腹部包块/正常腹部可触到的包块",
+                    "Flash": "正常腹部可触到的包块.swf",
+                    "NetID": "48803",
+                    "defalut_sound": ""
+                  },
+                  {
+                    "Name": "异常包块",
+                    "TreeDir": "/腹部触诊/腹部触诊内容/腹部包块/异常包块",
+                    "Flash": "异常包块.swf",
+                    "NetID": "48804",
+                    "defalut_sound": ""
+                  }
+                ]
+              },
+              {
+                "Name": "腹壁紧张度",
+                "TreeDir": "/腹部触诊/腹部触诊内容/腹壁紧张度",
+                "Flash": "腹壁紧张度.swf",
+                "NetID": ""
+              },
+              {
+                "Name": "压痛及反跳痛",
+                "TreeDir": "/腹部触诊/腹部触诊内容/压痛及反跳痛",
+                "Flash": "压痛及反跳痛.swf",
+                "NetID": ""
+              },
+              {
+                "Name": "液波震颤",
+                "TreeDir": "/腹部触诊/腹部触诊内容/液波震颤",
+                "Flash": "液波震颤.swf",
+                "NetID": ""
+              }
+            ]
+          },
+          {
+            "Name": "乳房触诊",
+            "TreeDir": "/腹部触诊/乳房触诊",
+            "Courseware": [
+              {
+                "Name": "触诊方法",
+                "TreeDir": "/腹部触诊/乳房触诊/触诊方法",
+                "Flash": "(乳房)触诊方法.swf",
+                "NetID": ""
+              },
+              {
+                "Name": "触诊内容",
+                "TreeDir": "/腹部触诊/乳房触诊/触诊内容",
+                "Flash": "(乳房)触诊内容.swf",
+                "NetID": ""
+              },
+              {
+                "Name": "结果判定",
+                "TreeDir": "/腹部触诊/乳房触诊/结果判定",
+                "Flash": "结果判定.swf",
+                "NetID": ""
+              }
+            ]
+          },
+          {
+            "Name": "腹部听诊",
+            "TreeDir": "/腹部触诊/腹部听诊",
+            "Courseware": [
+              {
+                "Name": "肠鸣音",
+                "TreeDir": "/腹部触诊/腹部听诊/肠鸣音",
+                "Flash": "肠鸣音.swf",
+                "NetID": "肠鸣音亢进.wav",
+                "sound_list": [
+                  {
+                    "sound_file": "肠鸣音亢进.wav",
+                    "is_heart": "2",
+                    "position_list": [
+                      {
+                        "position": "54",
+                        "volume": "100"
+                      }
+                    ]
+                  }
+                ],
+                "tremble_position": "0"
+              },
+              {
+                "Name": "血管杂音",
+                "TreeDir": "/腹部触诊/腹部听诊/血管杂音",
+                "Flash": "血管杂音.swf",
+                "NetID": "肾动脉狭窄血管杂音.wav",
+                "sound_list": [
+                  {
+                    "sound_file": "肾动脉狭窄血管杂音.wav",
+                    "is_heart": "2",
+                    "position_list": [
+                      {
+                        "position": "52",
+                        "volume": "100"
+                      },
+                      {
+                        "position": "53",
+                        "volume": "100"
+                      }
+                    ]
+                  }
+                ],
+                "tremble_position": "0"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

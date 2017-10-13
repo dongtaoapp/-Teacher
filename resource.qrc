@@ -57,5 +57,8 @@
         <file>images/allTeach_ing.png</file>
         <file>images/kuoyin_ing.png</file>
         <file>images/monitingzhen_ing.png</file>
+        <file>images/coursewarelist_more_button.png</file>
+        <file>images/coursewarelistm_retract_button.png</file>
+        <file>images/Talking.png</file>
     </qresource>
 </RCC>

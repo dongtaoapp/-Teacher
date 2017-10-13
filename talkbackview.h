@@ -9,7 +9,7 @@
 #define ONLINE_ICON  "QCheckBox{image:url(:/images/testbed_connected_icon.png);}"
 #define OFFLINE_ICON "QCheckBox{image:url(:/images/testbed_disconnect_icon.png)}"
 #define REQUEST_ICON "QCheckBox{image:url(:/images/raisehands_icon.png);color:#1abc9c}"
-
+#define TALKING_ICON "QCheckBox{image:url(:/images/Talking.png);color:#1abc9c}"
 #include <QList>
 #include <QCheckBox>
 #include <QWidget>
@@ -31,9 +31,10 @@ class TalkbackView : public QDialog
 public:
 
     enum chexbox_state{
-        TBVONLINE,
-        TBVOFFLINE,
-        TBVREQUEST
+        TBVONLINE=0,
+        TBVOFFLINE=1,
+        TBVREQUEST=2,
+        TBVTALKING
     };
 public:
     explicit TalkbackView(QWidget *parent = 0);
@@ -54,12 +55,14 @@ public slots:
     bool setTestbedState(int id,int state);//试验台状态函数
 
     void on_allowbtn();
+
+    void StopTalk();
 signals:
-    void stop_talkback();
+   // void stop_talkback();
 
     void StartOrStopTalk(bool);//开始结束对讲信号
 
-    void allowTalkList(QList<int> );
+    void allowTalkList(QList<int>,bool );
 
     void doquit( bool );
 

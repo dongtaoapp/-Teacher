@@ -25,6 +25,7 @@
 #include <QtSerialPort/QSerialPort>
 #include "qsoundcontrol.h"
 #include "qgettreecontentfromweb.h"
+#include "qpalpationpracticetip.h"
 #include <QTreeWidget>
 #include <QWebEngineView>
 #include <QMessageBox>
@@ -66,8 +67,9 @@ public:
     ~QTrainMainWindow();
     void windowInit();
     void loadqss();
-
     void ChangeTabStyleSheet(int index);
+
+    void InitShow();
 protected:
     void mousePressEvent (QMouseEvent *event);
     void mouseMoveEvent(QMouseEvent * event);
@@ -75,7 +77,8 @@ protected:
     void timerEvent(QTimerEvent *event);
 protected:
      void InitComm();
-
+signals:
+     void LocalPath(QString &);
 public slots:
 
 
@@ -90,6 +93,9 @@ public slots:
 
 
       void onTabchange(int index);
+      void CourseWareTab();
+      void CaseTab();
+      void DiffTab();
       void flashAction (QString cmd,QString data);
       void loadflash(QString &flashpath);//加载flash
       void setPathshow(QString &path);
@@ -105,12 +111,15 @@ public slots:
       void OnCaseItemData(stardardCase &Case);//获取 Tree 病例Item data
       void OnDiffSoundData(diffSound &diffsound);
       void doSearchWork(QString &str);
-
+      void AllTeachLocalCase(QString &id);
 
       void doChangTalkBntIcon();
       void doRequest(int deskID,int State);
-      void doSwitchBtnClicked(bool checked);
 
+
+      void OnCourseWarecomboBtn(bool checked);
+      void OnCaseComboBtn(bool checked);
+      void OnDiffComboBtn(bool checked);
     //  void onSysCilecked(int index);//系统设置控件点击事件
 
 
@@ -118,12 +127,11 @@ public slots:
 
       void doLoginsuccess(QString &name,QString &avatar);
 
-
-
       //初始化声音控制
       void InitSoundControl();
       //扩音听诊
       void OnSoundPlay();
+      void play();
       //串口读取到数据的处理
       void readyReadSlot();
       //模拟听诊
@@ -169,8 +177,9 @@ private:
     QPushButton *teach_btn;
     QPushButton *touchTrainBtn;
 
-    SwitchButton *comboBtn;
-
+    SwitchButton *CourseWarecomboBtn;
+    SwitchButton *CaseconboBtn;
+    SwitchButton *DiffconBtn;
     main_tab *m_tab;
     TalkbackView *talkwindow;
     m_searchLineEdit *searchEdit;
@@ -189,14 +198,15 @@ private:
     QString CurriculumID;
     QManager m_manager;
     QString m_flashpath;
-    bool m_play,is_soundPlay,is_allTeach,is_listen;
+    bool m_play,is_soundPlay,is_listen;
     int xOffset,yOffset;
-    int comboID;//当前那个Tab存在套餐
+    int comboID,CurrentBtnIndex;//当前那个Tab存在套餐
     m_ftp_manager webmanager;
-    QMessageBox *TipBox;
+    QPalpationpracticeTip *TipBox;
     QString webIP;
     bool isloadflash;
-    bool Synchronous;
+    bool Synchronous,m_test;
+    bool CourseWareHavePackage,CaseHavePackage,DiffHavePackage;
 protected:
     QSerialPort*            m_pSerialPort;      //串口插件
     int                     m_nState;           //状态: 0:暂停;1:播发课件;2:模拟听诊;3:扩音听诊

@@ -121,7 +121,8 @@ void QSoundPlayParts::InitialSoundPart(HWND hWnd,  QByteArray strSoundInfo,QStri
         }
     else
     {
-        qDebug()<<__FUNCTION__<<jsonError.errorString()<<"+++++++++++++++++++++++++++++++++++++";
+//        qDebug()<<__FUNCTION__<<jsonError.errorString()<<"+++++++++++++++++++++++++++++++++++++";
+        return;
     }
 }
 

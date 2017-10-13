@@ -21,7 +21,7 @@ public slots:
     void on_HS_cware();//ĞÄÔàÌıÕïµã»÷ĞÅºÅ
     void on_ABT_cware();//
     void on_ECG_cware();
-
+    void btnInit();
 signals:
     void cware_btn_id(int id);
 

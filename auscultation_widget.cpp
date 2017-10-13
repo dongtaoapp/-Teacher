@@ -10,8 +10,7 @@ auscultation_widget::auscultation_widget(QWidget *parent) :
 {
     ui->setupUi(this);
     this->setObjectName("auscultation_widget");
-    QString str="QPushButton:focus{border-image:url(:/images/clicked.png);}"
-                "QPushButton{background-color:#3099e5;color:white;border:none;}"
+    QString str="QPushButton{background-color:#3099e5;color:white;border:none;}"
                 "QWidget{border:none}";
     ui->BS_btn->setFlat(true);
     ui->HS_bt->setFlat(true);
@@ -24,24 +23,36 @@ auscultation_widget::~auscultation_widget()
 {
     delete ui;
 }
+void auscultation_widget::btnInit()
+{
+    ui->BS_btn->setStyleSheet(QString("image:url(:/images/a.png)"));
+    ui->HS_bt->setStyleSheet(QString("image:url(:/images/a.png)"));
+}
 void auscultation_widget::on_BS_btn()
 {
+    btnInit();
+    ui->BS_btn->setStyleSheet(QString("image:url(:/images/clicked.png)"));
     emit aut_btn_id(ID_BS_AUT);
 }
 void auscultation_widget::on_HS_btn()
 {
+    btnInit();
+    ui->HS_bt->setStyleSheet(QString("image:url(:/images/clicked.png)"));
     emit aut_btn_id(ID_HS_AUT);
 }
 
 void auscultation_widget::setBtnFoucse(int index)
 {
+    btnInit();
     switch(index)
     {
     case 0:
-        ui->HS_bt->setFocus();
+        ui->HS_bt->setStyleSheet(QString("image:url(:/images/clicked.png)"));
         break;
     case 1:
-        ui->BS_btn->setFocus();
+        ui->BS_btn->setStyleSheet(QString("image:url(:/images/clicked.png)"));
+    default:
+        break;
     }
 }
 void auscultation_widget::paintEvent(QPaintEvent *event)

@@ -12,11 +12,6 @@ QCompareView::QCompareView(QWidget *parent) :
     setAutoFillBackground(true);
     this->setWindowFlags(Qt::FramelessWindowHint);//È¥µô±êÌâÀ¸
 
-    ui->compareBtn->setFocusPolicy(Qt::NoFocus);
-    ui->deleteBtn_first->setFocusPolicy(Qt::NoFocus);
-    ui->deleteBtn_second->setFocusPolicy(Qt::NoFocus);
-    ui->empty_btn->setFocusPolicy(Qt::NoFocus);
-    ui->hide_btn->setFocusPolicy(Qt::NoFocus);
     connect(ui->compareBtn,SIGNAL(clicked(bool)),this,SLOT(onUiCompareBtn()));
     connect(ui->deleteBtn_first,SIGNAL(clicked(bool)),this,SLOT(onUideleteBtnFirst()));
     connect(ui->deleteBtn_second,SIGNAL(clicked(bool)),this,SLOT(onUideleteBtnSecond()));

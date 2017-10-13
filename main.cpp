@@ -27,12 +27,17 @@ int main(int argc, char *argv[])
     qRegisterMetaType<diffSound>("diffSound &");
     qRegisterMetaType<QString>("QString &");
     qDebug()<<"main thread"<<QThread::currentThreadId();
-    QTrainMainWindow w;
-//    w.show();
-//    w.InitSoundControl();
 
-    LoginBackgroundForm  *t=new LoginBackgroundForm;
-    t->show();
+
+    QTrainMainWindow w;
+
+//    w.InitShow();
+    w.ClassScheduleInit();
+
+//    w.setCurriculumID(aa);
+
+//    LoginBackgroundForm  *t=new LoginBackgroundForm;
+//    t->show();
 
 ////    QChoseCurriculumView Ch;
 
@@ -40,10 +45,10 @@ int main(int argc, char *argv[])
 ////    Ch.addCurriculum(Data2);
 //  //  Ch.show();
 
-    QObject::connect(t,SIGNAL(dologinSuccess(QString&,QString&)),&w,SLOT(doLoginsuccess(QString&,QString&)));
-    QObject::connect(t,SIGNAL(dologinSuccess(QString&,QString&)),&w,SLOT(GetDiffData()));
-    QObject::connect(t,SIGNAL(dologinSuccess(QString&,QString&)),&w,SLOT(ClassScheduleInit()));
-    QObject::connect(t,SIGNAL(dologinSuccess(QString&,QString&)),t,SLOT(deleteLater()));
+//    QObject::connect(t,SIGNAL(dologinSuccess(QString&,QString&)),&w,SLOT(doLoginsuccess(QString&,QString&)));
+//    QObject::connect(t,SIGNAL(dologinSuccess(QString&,QString&)),&w,SLOT(GetDiffData()));
+//    QObject::connect(t,SIGNAL(dologinSuccess(QString&,QString&)),&w,SLOT(ClassScheduleInit()));
+//    QObject::connect(t,SIGNAL(dologinSuccess(QString&,QString&)),t,SLOT(deleteLater()));
 
 //    QObject::connect(t,SIGNAL(dologinSuccess(QString&,QString&)),&w,SLOT(show()));
 //    QObject::connect(&Ch,SIGNAL(CLNum(QString&)),&w,SLOT(setCurriculumID(QString&)));

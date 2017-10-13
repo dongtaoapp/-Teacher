@@ -20,6 +20,7 @@ public:
     explicit case_widget(QWidget *parent = 0);
     ~case_widget();
     void setBtnFouse(int index);
+    void btnInit();
 protected:
   void paintEvent(QPaintEvent *event);
 signals:

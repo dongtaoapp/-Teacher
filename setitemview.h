@@ -16,6 +16,7 @@ public:
     explicit SetItemView(QWidget *parent = 0);
     ~SetItemView();
     void Init();
+    void btnInit();
 public slots:
     void onBtn1();
     void onBtn2();

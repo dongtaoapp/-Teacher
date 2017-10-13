@@ -40,6 +40,7 @@ void QSetSystemView::onMYItemclicked(QListWidgetItem *item)
     else if(item->text()==QStringLiteral("设置"))
     {      
          this->close();
+         setView->onBtn3();
          setView->exec();
     }
     else if(item->text()==QStringLiteral("同步关机"))

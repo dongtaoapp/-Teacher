@@ -85,7 +85,7 @@ signals:
     void FlahsItemData(QCoursewareInfo &info);//本地flash Item信息
     void webItemData(userCourseware &);//自定义 课件Item 信息
     void CaseItemData(stardardCase &);//病例 Item 信息
-
+    void AllTeachCaseItem(QString &data);
     void DiffSound(diffSound &);
     void TreeItemWidgetID(QString &);
 
@@ -117,7 +117,7 @@ public:
     QMap<QString,QCoursewareInfo> CourseWareHL_map; //心肺
     QMap<QString,QCoursewareInfo> CourseWareABT_map; //腹部
     QMap<QString,QCoursewareInfo> CourseWareECG_map; //心电图
-    QMap<QString,TreeItemWidget*> TreeItemWidget_map;//病例树形图子项Map;
+
     QList<userCourseware*> lstUserCourseware;//自定义课件List
     QParseCourseWareFileOp    *ReadJsonWorkhl;
     QParseCourseWareFileOp    *ReadJsonWorkABT;
@@ -129,7 +129,7 @@ public:
     QTreeWidgetItem *child;
     QTreeWidgetItem *old;
     QList<stardardCase> lststardardCase;//标准化病例链表
-
+    QMap<QString,TreeItemWidget*> TreeItemWidget_map;//病例树形图子项Map;
     //---------------鉴别听诊变量
     QList<diffSound> lstDiffSound;//鉴别听诊信息链表
     QMap<QString,diffSound> DiffSoundTreewidget_map;//Item Data Map

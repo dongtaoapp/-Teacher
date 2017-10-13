@@ -90,5 +90,5 @@ Q_DECLARE_METATYPE(ClassScheduleData);
 #define ONLINE 130
 #define OFFLINE 140
 #define REQUEST 150
-
+#define TALKING 160
 #endif // DEFINE_H

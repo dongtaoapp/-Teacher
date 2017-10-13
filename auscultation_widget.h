@@ -15,6 +15,7 @@ public:
     explicit auscultation_widget(QWidget *parent = 0);
     ~auscultation_widget();
     void setBtnFoucse(int index);
+    void btnInit();
 protected:
   void paintEvent(QPaintEvent *event);
 public slots:

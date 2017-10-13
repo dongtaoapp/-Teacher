@@ -56,8 +56,6 @@ public slots:
 //------------------鉴别听诊套餐
   void GetDiffSoundCombo(QString &ID);
   void GetDiffSoundComboFinsh();
-
-
   //---------------------鉴别听诊单个信息
   void GetDiffSoundFile(QString &ID);//获取鉴别听诊声音信息
   void GetDiffSoundFileFinsh();
@@ -75,13 +73,11 @@ private:
     QNetworkReply *up_reply;
     QNetworkReply *down_reply;
     QNetworkReply *post_reply;
-
     QNetworkReply *aaatest;
     QUrl m_url;
     QFile *m_file;
     QByteArray m_download_byte;
     QString all_filename;
-
 
     QJsonArray jarry;
     QJsonDocument jdocument;

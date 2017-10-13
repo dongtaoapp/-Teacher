@@ -14,6 +14,7 @@ TalkbackView::TalkbackView(QWidget *parent) :
 {
 
     ui->setupUi(this);
+    ui->chose_all->setEnabled(false);
     this->setObjectName("TalkbackView");
     this->setAttribute(Qt::WA_TranslucentBackground);
     this->setModal(false);
@@ -41,7 +42,7 @@ TalkbackView::TalkbackView(QWidget *parent) :
     connect(ui->quit_btn,SIGNAL(clicked(bool)),this,SLOT(on_quitbtn()));
     connect(ui->allow_btn,SIGNAL(clicked(bool)),this,SLOT(on_allowbtn()));
 
-    connect(ui->stop_btn,SIGNAL(clicked(bool)),this,SIGNAL(stop_talkback()));
+    connect(ui->stop_btn,SIGNAL(clicked(bool)),this,SLOT(StopTalk()));
     connect(ui->remove_btn,SIGNAL(clicked()),this,SLOT(on_removebtn()));
     connect(close_btn,SIGNAL(clicked()),this,SLOT(close()));
 }
@@ -105,7 +106,6 @@ void TalkbackView::stateInit()
     }
 }
 
-/************试验台位置*****************/
 void TalkbackView::tableInit()
 {
     if(m_tabnum==0)
@@ -165,17 +165,21 @@ void TalkbackView::tableInit()
    ui->scrollArea->setWidget(scrollArea_widget);
    stateInit();
 }
-/*************全选checxbox槽函数***************/
 void TalkbackView::all_chose(int chose)
 {
     QMapIterator<int,QCheckBox *> iter(testbed_map);
+    QMapIterator<int, chexbox_state> iter1(tab_state_map);
     if(chose)
     {
-     while(iter.hasNext())
-     {
-         iter.next();
-         iter.value()->setChecked(true);
-      }
+
+        while(iter1.hasNext())
+        {
+            iter1.next();
+            if(iter1.value()==TBVONLINE)
+            {
+                testbed_map.find(iter1.key()).value()->setChecked(true);
+            }
+        }
     }
     else
     {
@@ -187,7 +191,7 @@ void TalkbackView::all_chose(int chose)
     }
 }
 
-/***学生请求弹出槽函数*****/
+
 void TalkbackView::popup_chose(int chose)
 {
     if(chose)
@@ -200,33 +204,9 @@ void TalkbackView::popup_chose(int chose)
     }
 }
 
-/*
- * 对讲测试按钮的槽函数
- */
 
-# if 0
-void TalkbackView::on_talkback_btn()
-{
-    if(!talkback)
-    {
-       //TODO
 
-       talkback=true;
-       ui->talkback_btn->setText(QStringLiteral("正在进行对讲.."));
-       emit StartOrStopTalk(true);
-       return;
-    }
-    else if(talkback)
-    {
-        //TODO
 
-       talkback=false;
-       ui->talkback_btn->setText(QStringLiteral("对讲结束.."));
-       emit StartOrStopTalk(false);
-       return;
-    }
-}
-#endif
 void TalkbackView::on_quitbtn()
 {
     if(!quit)
@@ -249,9 +229,6 @@ void TalkbackView::on_quitbtn()
     }
 }
 
-/*
- *移除请求的槽函数
- */
 void TalkbackView::on_removebtn()
 {
 
@@ -266,9 +243,6 @@ void TalkbackView::on_removebtn()
         }
     }
 }
-/*
- * 允许发言槽函数
- */
 
 void TalkbackView::on_allowbtn()
 {
@@ -276,21 +250,52 @@ void TalkbackView::on_allowbtn()
   QMapIterator<int,QCheckBox *> iter(testbed_map);
   while(iter.hasNext())
      {
-         iter.next();  ///放在前面
-         if(iter.value()->isChecked())
+         iter.next();
+         chexbox_state m_state= tab_state_map.find(iter.key()).value();
+         if(iter.value()->isChecked()&&m_state==TBVONLINE||m_state==TBVREQUEST)
          {
-             qDebug()<<__FUNCTION__<<"bed id :"<<iter.key();
-             allow_id_list.append(iter.key());
+             setTestbedState(iter.key(),TALKING);
              iter.value()->setChecked(false);
-             setTestbedState(iter.key(),ONLINE);
+             allow_id_list.append(iter.key());
+         }
+         else
+         {
+             iter.value()->setChecked(false);
          }
      }
-   emit allowTalkList(allow_id_list);
-
+  if(allow_id_list.isEmpty())
+  {
+    return;
+  }
+   emit allowTalkList(allow_id_list,true);
    emit changTalkBntIcon();
 }
 
-/*******设置窗口状态*************/
+void TalkbackView::StopTalk()
+{
+    QList<int > allow_id_list;
+    QMapIterator<int,QCheckBox *> iter(testbed_map);
+    while(iter.hasNext())
+       {
+           iter.next();
+           if(iter.value()->isChecked()&&tab_state_map.find(iter.key()).value()==TBVTALKING)
+           {
+               setTestbedState(iter.key(),ONLINE);
+               iter.value()->setChecked(false);
+               allow_id_list.append(iter.key());
+           }
+           else
+           {
+               iter.value()->setChecked(false);
+           }
+       }
+    if(allow_id_list.isEmpty())
+    {
+      return;
+    }
+    emit allowTalkList(allow_id_list,false);
+}
+
 bool TalkbackView::setTestbedState(int id, int state)
 {
     if(id>m_tabnum)
@@ -304,27 +309,31 @@ bool TalkbackView::setTestbedState(int id, int state)
         tab_state_map.insert(id,TBVONLINE);
         return true;
     }
-    else if(state==OFFLINE)
+    if(state==OFFLINE)
     {
         testbed_map.find(id).value()->setStyleSheet(OFFLINE_ICON);
         tab_state_map.insert(id,TBVOFFLINE);
         return true;
     }
-    else if(state==REQUEST)
+    if(state==REQUEST)
     {
         testbed_map.find(id).value()->setStyleSheet(REQUEST_ICON);
         tab_state_map.insert(id,TBVREQUEST);
         return true;
     }
+    if(state==TALKING)
+    {
+        testbed_map.find(id).value()->setStyleSheet(TALKING_ICON);
+        tab_state_map.insert(id,TBVTALKING);
+        return true;
+    }
 }
 
-/************对讲界面事件函数**************/
 void TalkbackView::mousePressEvent (QMouseEvent *event)
 {
    this->xOffset = event->globalPos().rx() - this->pos().rx();
    this->yOffset = event->globalPos().ry() - this->pos().ry();
 }
-
 void TalkbackView::mouseMoveEvent(QMouseEvent * event)
 {
     if (event->buttons() == Qt::LeftButton&&ui->top_label->frameRect().contains(this->xOffset,this->yOffset))

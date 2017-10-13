@@ -11,6 +11,7 @@ class SwitchButton: public QWidget
 public:
     SwitchButton(QWidget *parent = 0);
     ~SwitchButton();
+//     void m_test(SwitchButton *a);
 protected:
     void mousePressEvent(QMouseEvent *);
     void resizeEvent(QResizeEvent *);

@@ -19,13 +19,17 @@ public:
     ~QManager();
     void managerInit();
     void startAllTeach(bool cmd);
-    void AllTeachAction(QString &action);
+    void AllTeachActionTab(int tab);
+    void AllTeachActionBtn(QString &action);
     void AllTeachActionDiffItem(QString &ID);
     void AllTeachActionDiffItemDelete(QString &index);
     void AllTeachActionDiffItemlOAD();
+    void ALLTeachLocalFlash(QString &FileName);
+    void ALLTeachLocalCase(QString &ID);
+    void ALLTeachWork(QString &work);
 public slots:
     void closeClientWindow();
-    void doAllowTalk(QList<int> id_list);
+    void doAllowTalk(QList<int> id_list,bool cmd);
     void speakAndlistenInit();
     void controllisten(bool listen);
 signals:

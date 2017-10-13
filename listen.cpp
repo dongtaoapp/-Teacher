@@ -36,11 +36,14 @@ listen::listen()
     format.setSampleType (QAudioFormat::SignedInt);   //设置采样类型
     format.setByteOrder (QAudioFormat::LittleEndian); //设置字节序为小端字节序
     socket = new QUdpSocket(this);
-    if(socket->bind(QHostAddress::AnyIPv4, 25000, QUdpSocket::ShareAddress))
+    if(socket->bind(QHostAddress::AnyIPv4, 250000, QUdpSocket::ShareAddress))
     {
+        //        //QHostAddress("224.1.1.3"), 250000
+
         qDebug()<<socket->errorString();
+        //设置回环
         socket->setSocketOption(QAbstractSocket::MulticastLoopbackOption, 0);
-        socket->joinMulticastGroup(QHostAddress("224.1.2.3"));//加入组播地址
+        socket->joinMulticastGroup(QHostAddress("224.1.1.3"));//加入组播地址
     }
     connect(socket, SIGNAL(readyRead()),this, SLOT(readyReadSlot()));
     output = new QAudioOutput(format);
@@ -81,7 +84,7 @@ void listen::stop_sys_audio()
 /************对声音进行解码处理 并写入扬声器***************/
 void listen::star_listen(QByteArray &byte_array)
 {
-    qDebug()<<__FUNCTION__<<QThread::currentThreadId();
+//    qDebug()<<__FUNCTION__<<QThread::currentThreadId();
     if(outdevice==Q_NULLPTR)
     {
       //  qDebug()<<__FUNCTION__<<"output == null";

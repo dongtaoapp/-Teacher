@@ -13,9 +13,7 @@ TellClientConnected::~TellClientConnected()
 }
 void TellClientConnected::my_send()
 {
-
-    qDebug()<<"++++++++++++++++++++++++++++++";
-    if(times<3)
+    if(times<5)
     {
         QByteArray datagram = "OFFLINECONNECT";
         socket->writeDatagram(datagram.data(),datagram.size(),QHostAddress::Broadcast,1066);

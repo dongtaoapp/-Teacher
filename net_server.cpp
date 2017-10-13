@@ -226,7 +226,18 @@ void net_server::startAllTeach(bool cmd)
     sendbyte.clear();
 }
 //------action tabcurrentID:BtnID
-void net_server::ALLTeachAction(QString &action)
+void net_server::ALLTeachActionTab(int tab)
+{
+    jobject.insert("Type",QString("Synchronocus"));
+    jobject.insert("cmd",QString("Tab"));
+    jobject.insert("data",tab);
+    jdocument.setObject(jobject);
+    sendbyte=jdocument.toJson(QJsonDocument::Compact);
+    sendMsgtoClient(sendbyte);
+    sendbyte.clear();
+
+}
+void net_server::ALLTeachActionBtn(QString &action)
 {
     jobject.insert("Type",QString("Synchronocus"));
     jobject.insert("cmd",QString("action"));
@@ -269,6 +280,29 @@ void net_server::ALLTeachActionDiffItemLoad()
     sendbyte.clear();
 }
 /*************flash Ïà¹Øº¯Êý****************/
+void net_server::ALLTrachLocalFlash(QString &flashName)
+{
+    jobject.insert("Type",QString("flash"));
+    jobject.insert("cmd",QString("LOCALFlash"));
+    jobject.insert("data",flashName);
+    jdocument.setObject(jobject);
+    sendbyte=jdocument.toJson(QJsonDocument::Compact);
+    sendMsgtoClient(sendbyte);
+    sendbyte.clear();
+
+}
+void net_server::ALLTeachLocalCase(QString &ID)
+{
+    jobject.insert("Type",QString("flash"));
+    jobject.insert("cmd",QString("LOCALCase"));
+    jobject.insert("data",ID);
+    jdocument.setObject(jobject);
+    sendbyte=jdocument.toJson(QJsonDocument::Compact);
+    sendMsgtoClient(sendbyte);
+    sendbyte.clear();
+}
+
+#if 0
 void net_server::allTeach_courseware(QString &flashpath)
 {
    if(flashpath.isEmpty())
@@ -284,43 +318,38 @@ void net_server::allTeach_courseware(QString &flashpath)
    sendMsgtoClient(sendbyte);
    sendbyte.clear();
 }
-void net_server::allTeach_contralplayflash(bool cmd)
+#endif
+void net_server::ALLTeachWork(QString &work)
 {
-    jobject.insert("Type",QString("play"));
-    jobject.insert("cmd",cmd);
+    jobject.insert("Type",QString("WORK"));
+    jobject.insert("cmd",work);
     jobject.insert("data",QString("NULL"));
     jdocument.setObject(jobject);
     sendbyte=jdocument.toJson(QJsonDocument::Compact);
     sendMsgtoClient(sendbyte);
+//    qDebug()<<__FUNCTION__<<"+++++++++++++"<<sendbyte;
     sendbyte.clear();
 }
 
-void net_server::test(QString ip)
+void net_server::ControlTalk(QString ip,bool order)
 {
-       qDebug()<<__FUNCTION__;
-
     jobject.insert("Type",QString("talk"));
-    jobject.insert("cmd",true);
+    jobject.insert("cmd",order);
     jobject.insert("data","null");
     jdocument.setObject(jobject);
     sendbyte=jdocument.toJson(QJsonDocument::Compact);
-
     socketListmutex.lock();
-
     for(int i=0;i<socketlist.size();i++)
     {
           if(socketlist.at(i)->peerAddress().toString()==ip)
           {
               if(socketlist.at(i)->write(sendbyte)!=sendbyte.size())
               {
-
                   continue;
               }
          }
     }
-
     socketListmutex.unlock();
-
     sendbyte.clear();
 }
 

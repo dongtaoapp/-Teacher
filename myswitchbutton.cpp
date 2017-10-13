@@ -78,7 +78,12 @@ void SwitchButton::paintEvent(QPaintEvent *)
         //绘制文字
         drawText(&painter);
 }
-
+//void SwitchButton::m_test(SwitchButton *a)
+//{
+//    QPainter painter(a);
+//    painter.setRenderHint(QPainter::Antialiasing);
+//    drawText(&painter);
+//}
 void SwitchButton::drawBg(QPainter *painter)
 {
     painter->save();
@@ -124,20 +129,22 @@ void SwitchButton::drawText(QPainter *painter)
         painter->setPen(textColorOn);
         painter->drawText(0, 0, width() / 2 + space * 2, height(), Qt::AlignCenter, textOn);
     }
-
     painter->restore();
 }
 
 void SwitchButton::updateValue()
 {
     if (checked) {
-        if (startX < endX) {
+        if (startX < endX)
+        {
             startX = startX + step;
-        } else {
+        } else
+        {
             startX = endX;
             timer->stop();
         }
-    } else
+    }
+    else
     {
         if (startX > endX)
         {
@@ -154,19 +161,31 @@ void SwitchButton::updateValue()
 
 void SwitchButton::setChecked(bool checked)
 {
-   // if (this->checked != checked)
- //   {
+    if (this->checked != checked)
+    {
         this->checked = checked;
-
-         qDebug()<<__FUNCTION__<<checked;
         emit checkedChanged(checked);
+        step = width() / 50;
+        //状态切换改变后自动计算终点坐标
+        if (checked)
+        {
+           endX = width() - width() / 2;
+        } else
+        {
+            endX = 0;
+        }
+        timer->start(5);
         update();
-  //  }
+    }
 }
 
 void SwitchButton::setText(QString textOff, QString textOn)
 {
     this->textOff = textOff;
     this->textOn = textOn;
+//    QPainter painter(this);
+//    painter.setRenderHint(QPainter::Antialiasing);
+//    drawText(&painter);
     update();
+
 }

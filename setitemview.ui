@@ -23,10 +23,7 @@ QPushButton{
 	border-radius:3px;
     font-size:14px;
 }
-QPushButton:focus{
-	color:#4aabe9;
-    background-color:#f6f7fc;
-}
+
 </string>
   </property>
   <widget class="QStackedWidget" name="stackedWidget">

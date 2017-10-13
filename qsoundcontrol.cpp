@@ -85,11 +85,8 @@ void QSoundControl::LoadSoundConfigue(QByteArray strSoundInfo,QString &tremble_p
 void QSoundControl::LoadDiffSoundConfigue(QByteArray strSoundInfo1, QByteArray strSoundInfo2)
 {
     m_bInitial = FALSE;
-
     m_cMutex.lock();
-
     m_bInitial = TRUE;
-
 //    SetLoudAuscultateSound(strSoundInfo);
     SetDiffLoudAuscultateSound(strSoundInfo1,strSoundInfo2);
 

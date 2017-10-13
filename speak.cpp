@@ -98,14 +98,11 @@ bool speak::setTalkipList(QStringList &ipList)
 }
 */
 
-/*
- * 通过UDP进行声音的播放
- */
+/** 通过UDP进行声音的播放*/
 void speak::start_speak(QByteArray &speak_data)
 {
-   qDebug()<<"speak thread :"<<QThread::currentThreadId();
-   qint64 aa =SOCKET->writeDatagram(speak_data, QHostAddress("224.1.1.3"), 50000);
-   qDebug()<<"speak_data size :"<<speak_data.size()<<"socket size:"<<aa;
+   qint64 aa =SOCKET->writeDatagram(speak_data, QHostAddress("224.1.1.3"), 250000);
+//   qDebug()<<__FUNCTION__<<"socket size:"<<aa;
 }
 /***对监听到的声音进行处理*********/
 

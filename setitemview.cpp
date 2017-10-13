@@ -16,15 +16,6 @@ SetItemView::SetItemView(QWidget *parent) :
     this->setWindowTitle(QStringLiteral("系统设置选项"));
     pag1_radiobtn=-1;
     pag2_radiobtn=-1;
-    ui->radioButton->setFocusPolicy(Qt::NoFocus);
-    ui->radioButton_2->setFocusPolicy(Qt::NoFocus);
-    ui->radioButton_3->setFocusPolicy(Qt::NoFocus);
-    ui->radioButton_4->setFocusPolicy(Qt::NoFocus);
-    ui->groupBox_2->setFocusPolicy(Qt::NoFocus);
-    ui->groupBox_3->setFocusPolicy(Qt::NoFocus);
-    ui->groupBox->setFocusPolicy(Qt::NoFocus);
-
-    ui->btn3->setFocus();
     ui->stackedWidget->setCurrentIndex(2);
     configInit = new QSettings(APPPATH, QSettings::IniFormat);
     this->Init();
@@ -44,17 +35,35 @@ SetItemView::~SetItemView()
 }
 void SetItemView::onBtn1()
 {
+    btnInit();
+    ui->btn1->setStyleSheet(QString("QPushButton{color:#4aabe9;background-color:#f6f7fc}"));
     emit changPag(0);
 }
 void SetItemView::onBtn2()
 {
+    btnInit();
+    ui->btn2->setStyleSheet(QString("QPushButton{color:#4aabe9;background-color:#f6f7fc}"));
     emit changPag(1);
 }
 void SetItemView::onBtn3()
 {
+    btnInit();
+    ui->btn3->setStyleSheet(QString("QPushButton{color:#4aabe9;background-color:#f6f7fc}"));
     emit changPag(2);
 }
-
+/*
+ *
+ *QPushButton:focus{
+    color:#4aabe9;
+    background-color:#f6f7fc;
+}
+ */
+void SetItemView::btnInit()
+{
+     ui->btn1->setStyleSheet(QString("QPushButton{color:;background-color:}"));
+     ui->btn2->setStyleSheet(QString("QPushButton{color:;background-color:}"));
+     ui->btn3->setStyleSheet(QString("QPushButton{color:;background-color:}"));
+}
 void SetItemView::Init()
 {
     pag1_radiobtn= configInit->value("System_Param/HeartAuscultateType").toInt();

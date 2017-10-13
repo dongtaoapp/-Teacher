@@ -11,10 +11,8 @@ m_ftp_manager::m_ftp_manager()
     up_reply=Q_NULLPTR;
     down_reply=Q_NULLPTR;
     m_file=new QFile;
-
     GetWebIp();
     m_download_byte.clear();
-
 }
 
 m_ftp_manager::~m_ftp_manager()
@@ -47,11 +45,10 @@ void m_ftp_manager::uploadfile( QString path,  QString filename)
            qDebug()<<file.errorString();
            return;
    }
-       QByteArray data = file.readAll();
-       m_url.setPath(path);
-       up_reply = m_manager->put(QNetworkRequest(m_url), data);
-       connect(up_reply,SIGNAL(finished()),this,SLOT(on_Uploadfinsh()));
-
+   QByteArray data = file.readAll();
+   m_url.setPath(path);
+   up_reply = m_manager->put(QNetworkRequest(m_url), data);
+   connect(up_reply,SIGNAL(finished()),this,SLOT(on_Uploadfinsh()));
 }
 void m_ftp_manager::on_Uploadfinsh()
 {

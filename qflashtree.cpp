@@ -423,7 +423,7 @@ void qFlashTreeBase::constructionCouseWareTree(QMapIterator<QString, QCourseware
                     item->setText(1,QString::number(map.value().sonClsaa));
                 }
                 Item_map.insert(map.key(),item);
-                }
+           }
                 else
                 {
                     qDebug()<<__FUNCTION__<<map.key();
@@ -524,8 +524,8 @@ void qFlashTreeBase::CouseWareStyleSheet()
     this->setStyleSheet(QString("QTreeView::branch:has-siblings:!adjoins-item{border-image: url(:/images/vline.png) 0;}"
                                 "QTreeView::branch:has-siblings:adjoins-item {border-image: url(:/images/branch-more.png) 0;}"
                                 "QTreeView::branch:!has-children:!has-siblings:adjoins-item {border-image: url(:/images/branch-end.png) 0;}"
-                                "QTreeView::branch:has-children:!has-siblings:closed,QTreeView::branch:closed:has-children:has-siblings {border-image: none;image: url(:/images/branch-closed.png);}"
-                                "QTreeView::branch:open:has-children:!has-siblings,QTreeView::branch:open:has-children:has-siblings  {border-image: none;image: url(:/images/branch-open.png);}"
+                                "QTreeView::branch:has-children:!has-siblings:closed,QTreeView::branch:closed:has-children:has-siblings {border-image: none;image: url(:/images/coursewarelist_more_button.png);}"
+                                "QTreeView::branch:open:has-children:!has-siblings,QTreeView::branch:open:has-children:has-siblings  {border-image: none;image: url(:/images/coursewarelistm_retract_button.png);}"
                                 "QTreeView::item:hover{background-color:#4aabe9;}"
                                 "QTreeView::item{margin-top:5px;}"));
 }
@@ -555,11 +555,18 @@ void qFlashTreeBase::doItemClicked(QTreeWidgetItem *item, int colum)
            return;
        }
    }
+
+
    /*********************点击病例Item**************************/
    else if(data0==QString("Case")||data1==QString("Case"))
    {
+      stardardCase m_case=item->data(0,Qt::UserRole).value<stardardCase>();
+      QString m_ID=QString::number(colum)+QString(":")+m_case.m_strCaseId;
+      if(!m_case.m_strCaseId.isEmpty())
+      {
+        emit AllTeachCaseItem(m_ID);
+      }
        TreeItemWidget *widget=static_cast<TreeItemWidget *>(this->itemWidget(item,1));
-
          if(widget==Q_NULLPTR)
          {
              return;
@@ -575,17 +582,16 @@ void qFlashTreeBase::doItemClicked(QTreeWidgetItem *item, int colum)
                    iter.value()->changStyle(QString(""));
                    iter.value()->Casecolum0Clicked=false;
                 }
-              widget->changStyle(QString("QLabel{border-style:solid;border:1px solid black}"));
+              widget->changStyle(QString("QLabel{border-style:solid;border:1px solid #999999;border-radius:4px}"));
               widget->Casecolum0Clicked=true;
             }
             if(colum==1)
             {
                 if(widget->Casecolum0Clicked)
                 {
-                    widget->changStyle(QString("QLabel{border-style:solid;border:1px solid black;background-color:red}"));
-                    //病例Itme信号 TODO
-
-                   emit CaseItemData(item->data(0,Qt::UserRole).value<stardardCase>());//发送Item 点击信息
+                    widget->changStyle(QString("QLabel{border-style:solid;border:1px solid #999999;background-color:#3099e5;border-radius:4px}"));
+                    //病例Itme信号
+                   emit CaseItemData(m_case);//发送Item 点击信息
                 }
                 else
                 {

@@ -64,10 +64,6 @@ void speak::start_audio_to_system()
     {
          indevice= input->start();
     }
-    else
-    {
-        qDebug()<<__FUNCTION__<<"indevice is not null================================";
-    }
     connect(indevice,SIGNAL(readyRead()),this,SLOT(on_readyRead()));
 }
 
@@ -102,7 +98,6 @@ bool speak::setTalkipList(QStringList &ipList)
 void speak::start_speak(QByteArray &speak_data)
 {
    qint64 aa =SOCKET->writeDatagram(speak_data, QHostAddress("224.1.1.3"), 250000);
-//   qDebug()<<__FUNCTION__<<"socket size:"<<aa;
 }
 /***对监听到的声音进行处理*********/
 

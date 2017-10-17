@@ -81,7 +81,8 @@ SOURCES       = main.cpp \
 		qparsecoursewarefileop.cpp \
 		qparsecousewarefile.cpp \
 		qcsorder.cpp \
-		qpalpationpracticetip.cpp debug\qrc_resource.cpp \
+		qpalpationpracticetip.cpp \
+		qmaxwidget.cpp debug\qrc_resource.cpp \
 		debug\moc_qtrainmainwindow.cpp \
 		debug\moc_auscultation_widget.cpp \
 		debug\moc_case_widget.cpp \
@@ -110,7 +111,8 @@ SOURCES       = main.cpp \
 		debug\moc_qcoursewareinfo.cpp \
 		debug\moc_qparsecoursewarefileop.cpp \
 		debug\moc_qcsorder.cpp \
-		debug\moc_qpalpationpracticetip.cpp
+		debug\moc_qpalpationpracticetip.cpp \
+		debug\moc_qmaxwidget.cpp
 OBJECTS       = debug\main.obj \
 		debug\qtrainmainwindow.obj \
 		debug\auscultation_widget.obj \
@@ -150,6 +152,7 @@ OBJECTS       = debug\main.obj \
 		debug\qparsecousewarefile.obj \
 		debug\qcsorder.obj \
 		debug\qpalpationpracticetip.obj \
+		debug\qmaxwidget.obj \
 		debug\qrc_resource.obj \
 		debug\moc_qtrainmainwindow.obj \
 		debug\moc_auscultation_widget.obj \
@@ -179,7 +182,8 @@ OBJECTS       = debug\main.obj \
 		debug\moc_qcoursewareinfo.obj \
 		debug\moc_qparsecoursewarefileop.obj \
 		debug\moc_qcsorder.obj \
-		debug\moc_qpalpationpracticetip.obj
+		debug\moc_qpalpationpracticetip.obj \
+		debug\moc_qmaxwidget.obj
 
 DIST          =  qtrainmainwindow.h \
 		auscultation_widget.h \
@@ -228,7 +232,8 @@ DIST          =  qtrainmainwindow.h \
 		qparsecoursewarefileop.h \
 		qparsecousewarefile.h \
 		qcsorder.h \
-		qpalpationpracticetip.h main.cpp \
+		qpalpationpracticetip.h \
+		qmaxwidget.h main.cpp \
 		qtrainmainwindow.cpp \
 		auscultation_widget.cpp \
 		case_widget.cpp \
@@ -266,7 +271,8 @@ DIST          =  qtrainmainwindow.h \
 		qparsecoursewarefileop.cpp \
 		qparsecousewarefile.cpp \
 		qcsorder.cpp \
-		qpalpationpracticetip.cpp
+		qpalpationpracticetip.cpp \
+		qmaxwidget.cpp
 QMAKE_TARGET  = PhysicalCheckTrainTeacher
 DESTDIR        = debug\ #avoid trailing-slash linebreak
 TARGET         = PhysicalCheckTrainTeacher.exe
@@ -335,7 +341,7 @@ dist:
 	$(ZIP) PhysicalCheckTrainTeacher.zip $(SOURCES) $(DIST) PhysicalCheckTrainTeacher.pro F:\qt_32\5.7\msvc2015\mkspecs\features\spec_pre.prf F:\qt_32\5.7\msvc2015\mkspecs\common\angle.conf F:\qt_32\5.7\msvc2015\mkspecs\common\msvc-base.conf F:\qt_32\5.7\msvc2015\mkspecs\common\msvc-desktop.conf F:\qt_32\5.7\msvc2015\mkspecs\qconfig.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_3dcore.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_3dcore_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_3dextras.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_3dextras_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_3dinput.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_3dinput_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_3dlogic.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_3dlogic_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_3dquick.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_3dquick_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_3dquickextras.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_3dquickextras_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_3dquickinput.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_3dquickinput_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_3dquickrender.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_3dquickrender_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_3drender.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_3drender_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_axbase.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_axbase_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_axcontainer.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_axcontainer_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_axserver.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_axserver_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_bluetooth.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_bluetooth_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_bootstrap_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_clucene_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_concurrent.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_concurrent_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_core.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_core_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_dbus.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_dbus_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_designer.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_designer_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_designercomponents_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_gamepad.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_gamepad_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_gui.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_gui_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_help.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_help_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_location.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_location_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_multimedia.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_multimedia_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_multimediawidgets.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_multimediawidgets_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_network.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_network_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_nfc.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_nfc_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_opengl.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_opengl_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_openglextensions.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_openglextensions_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_packetprotocol_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_platformsupport_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_positioning.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_positioning_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_printsupport.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_printsupport_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_purchasing.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_purchasing_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_qml.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_qml_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_qmldebug_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_qmldevtools_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_qmltest.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_qmltest_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_quick.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_quick_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_quickcontrols2.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_quickcontrols2_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_quickparticles_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_quicktemplates2_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_quickwidgets.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_quickwidgets_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_script.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_script_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_scripttools.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_scripttools_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_scxml.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_scxml_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_sensors.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_sensors_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_serialbus.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_serialbus_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_serialport.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_serialport_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_sql.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_sql_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_svg.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_svg_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_testlib.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_testlib_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_uiplugin.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_uitools.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_uitools_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_webchannel.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_webchannel_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_webengine.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_webengine_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_webenginecore.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_webenginecore_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_webenginecoreheaders_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_webenginewidgets.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_webenginewidgets_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_websockets.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_websockets_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_webview.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_webview_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_widgets.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_widgets_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_winextras.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_winextras_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_xml.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_xml_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_xmlpatterns.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_xmlpatterns_private.pri F:\qt_32\5.7\msvc2015\mkspecs\modules\qt_lib_zlib_private.pri F:\qt_32\5.7\msvc2015\mkspecs\features\qt_functions.prf F:\qt_32\5.7\msvc2015\mkspecs\features\qt_config.prf F:\qt_32\5.7\msvc2015\mkspecs\features\win32\qt_config.prf F:\qt_32\5.7\msvc2015\mkspecs\win32-msvc2015\qmake.conf F:\qt_32\5.7\msvc2015\mkspecs\features\spec_post.prf F:\qt_32\5.7\msvc2015\mkspecs\features\exclusive_builds.prf F:\qt_32\5.7\msvc2015\mkspecs\features\toolchain.prf F:\qt_32\5.7\msvc2015\mkspecs\features\default_pre.prf F:\qt_32\5.7\msvc2015\mkspecs\features\win32\default_pre.prf F:\qt_32\5.7\msvc2015\mkspecs\features\resolve_config.prf F:\qt_32\5.7\msvc2015\mkspecs\features\exclusive_builds_post.prf F:\qt_32\5.7\msvc2015\mkspecs\features\default_post.prf F:\qt_32\5.7\msvc2015\mkspecs\features\build_pass.prf F:\qt_32\5.7\msvc2015\mkspecs\features\win32\rtti.prf F:\qt_32\5.7\msvc2015\mkspecs\features\precompile_header.prf F:\qt_32\5.7\msvc2015\mkspecs\features\warn_on.prf F:\qt_32\5.7\msvc2015\mkspecs\features\qt.prf F:\qt_32\5.7\msvc2015\mkspecs\features\resources.prf F:\qt_32\5.7\msvc2015\mkspecs\features\moc.prf F:\qt_32\5.7\msvc2015\mkspecs\features\win32\opengl.prf F:\qt_32\5.7\msvc2015\mkspecs\features\uic.prf F:\qt_32\5.7\msvc2015\mkspecs\features\win32\dumpcpp.prf F:\qt_32\5.7\msvc2015\mkspecs\features\file_copies.prf F:\qt_32\5.7\msvc2015\mkspecs\features\win32\windows.prf F:\qt_32\5.7\msvc2015\mkspecs\features\testcase_targets.prf F:\qt_32\5.7\msvc2015\mkspecs\features\exceptions.prf F:\qt_32\5.7\msvc2015\mkspecs\features\yacc.prf F:\qt_32\5.7\msvc2015\mkspecs\features\lex.prf PhysicalCheckTrainTeacher.pro resource.qrc F:\qt_32\5.7\msvc2015\lib\qtmaind.prl F:\qt_32\5.7\msvc2015\lib\Qt5Multimediad.prl F:\qt_32\5.7\msvc2015\lib\Qt5AxContainerd.prl F:\qt_32\5.7\msvc2015\lib\Qt5AxBased.prl F:\qt_32\5.7\msvc2015\lib\Qt5WebEngineWidgetsd.prl F:\qt_32\5.7\msvc2015\lib\Qt5Widgetsd.prl F:\qt_32\5.7\msvc2015\lib\Qt5WebEngineCored.prl F:\qt_32\5.7\msvc2015\lib\Qt5Quickd.prl F:\qt_32\5.7\msvc2015\lib\Qt5Guid.prl F:\qt_32\5.7\msvc2015\lib\Qt5WebChanneld.prl F:\qt_32\5.7\msvc2015\lib\Qt5Qmld.prl F:\qt_32\5.7\msvc2015\lib\Qt5Networkd.prl F:\qt_32\5.7\msvc2015\lib\Qt5SerialPortd.prl F:\qt_32\5.7\msvc2015\lib\Qt5Sqld.prl F:\qt_32\5.7\msvc2015\lib\Qt5Positioningd.prl F:\qt_32\5.7\msvc2015\lib\Qt5Cored.prl  NO_PCH_SOURCES RESOURCES TYPELIBS HEADERS TYPELIBS SOURCES OBJECTIVE_SOURCES FORMS YACCSOURCES YACCSOURCES LEXSOURCES 
 
 clean: compiler_clean 
-	-$(DEL_FILE) debug\main.obj debug\qtrainmainwindow.obj debug\auscultation_widget.obj debug\case_widget.obj debug\courseware_widget.obj debug\main_tab.obj debug\talkbackview.obj debug\loginbackgroundform.obj debug\loginform.obj debug\qchosecurriculumview.obj debug\qcompareview.obj debug\listen.obj debug\speak.obj debug\qtouchtrainview.obj debug\qsetsystemview.obj debug\setitemview.obj debug\qmanager.obj debug\net_server.obj debug\tellclientconnected.obj debug\m_ftp_manager.obj debug\qdatabase.obj debug\qcomorder.obj debug\qgettreecontentfromweb.obj debug\qloudauscultatecontrolvir.obj debug\qloudauscultategeneralcontrol.obj debug\qloudauscultatetouchcontrol.obj debug\qloudauscultatetouchplayparts.obj debug\qparseinfofromweb.obj debug\qsoundcontrol.obj debug\qsoundplayparts.obj debug\qsoundresource.obj debug\aboutform.obj debug\myswitchbutton.obj debug\qflashtree.obj debug\qcoursewareinfo.obj debug\qparsecoursewarefileop.obj debug\qparsecousewarefile.obj debug\qcsorder.obj debug\qpalpationpracticetip.obj debug\qrc_resource.obj debug\moc_qtrainmainwindow.obj debug\moc_auscultation_widget.obj debug\moc_case_widget.obj debug\moc_courseware_widget.obj debug\moc_main_tab.obj debug\moc_talkbackview.obj debug\moc_loginbackgroundform.obj debug\moc_loginform.obj debug\moc_qchosecurriculumview.obj debug\moc_qcompareview.obj debug\moc_listen.obj debug\moc_speak.obj debug\moc_qtouchtrainview.obj debug\moc_qsetsystemview.obj debug\moc_setitemview.obj debug\moc_qmanager.obj debug\moc_net_server.obj debug\moc_tellclientconnected.obj debug\moc_m_ftp_manager.obj debug\moc_qdatabase.obj debug\moc_qgettreecontentfromweb.obj debug\moc_qparseinfofromweb.obj debug\moc_aboutform.obj debug\moc_myswitchbutton.obj debug\moc_qflashtree.obj debug\moc_qcoursewareinfo.obj debug\moc_qparsecoursewarefileop.obj debug\moc_qcsorder.obj debug\moc_qpalpationpracticetip.obj
+	-$(DEL_FILE) debug\main.obj debug\qtrainmainwindow.obj debug\auscultation_widget.obj debug\case_widget.obj debug\courseware_widget.obj debug\main_tab.obj debug\talkbackview.obj debug\loginbackgroundform.obj debug\loginform.obj debug\qchosecurriculumview.obj debug\qcompareview.obj debug\listen.obj debug\speak.obj debug\qtouchtrainview.obj debug\qsetsystemview.obj debug\setitemview.obj debug\qmanager.obj debug\net_server.obj debug\tellclientconnected.obj debug\m_ftp_manager.obj debug\qdatabase.obj debug\qcomorder.obj debug\qgettreecontentfromweb.obj debug\qloudauscultatecontrolvir.obj debug\qloudauscultategeneralcontrol.obj debug\qloudauscultatetouchcontrol.obj debug\qloudauscultatetouchplayparts.obj debug\qparseinfofromweb.obj debug\qsoundcontrol.obj debug\qsoundplayparts.obj debug\qsoundresource.obj debug\aboutform.obj debug\myswitchbutton.obj debug\qflashtree.obj debug\qcoursewareinfo.obj debug\qparsecoursewarefileop.obj debug\qparsecousewarefile.obj debug\qcsorder.obj debug\qpalpationpracticetip.obj debug\qmaxwidget.obj debug\qrc_resource.obj debug\moc_qtrainmainwindow.obj debug\moc_auscultation_widget.obj debug\moc_case_widget.obj debug\moc_courseware_widget.obj debug\moc_main_tab.obj debug\moc_talkbackview.obj debug\moc_loginbackgroundform.obj debug\moc_loginform.obj debug\moc_qchosecurriculumview.obj debug\moc_qcompareview.obj debug\moc_listen.obj debug\moc_speak.obj debug\moc_qtouchtrainview.obj debug\moc_qsetsystemview.obj debug\moc_setitemview.obj debug\moc_qmanager.obj debug\moc_net_server.obj debug\moc_tellclientconnected.obj debug\moc_m_ftp_manager.obj debug\moc_qdatabase.obj debug\moc_qgettreecontentfromweb.obj debug\moc_qparseinfofromweb.obj debug\moc_aboutform.obj debug\moc_myswitchbutton.obj debug\moc_qflashtree.obj debug\moc_qcoursewareinfo.obj debug\moc_qparsecoursewarefileop.obj debug\moc_qcsorder.obj debug\moc_qpalpationpracticetip.obj debug\moc_qmaxwidget.obj
 	-$(DEL_FILE) debug\PhysicalCheckTrainTeacher.exp debug\PhysicalCheckTrainTeacher.vc.pdb debug\PhysicalCheckTrainTeacher.ilk debug\PhysicalCheckTrainTeacher.idb
 
 distclean: clean 
@@ -424,9 +430,9 @@ debug\qrc_resource.cpp: resource.qrc \
 
 compiler_dumpcpp_decl_make_all:
 compiler_dumpcpp_decl_clean:
-compiler_moc_header_make_all: debug\moc_qtrainmainwindow.cpp debug\moc_auscultation_widget.cpp debug\moc_case_widget.cpp debug\moc_courseware_widget.cpp debug\moc_main_tab.cpp debug\moc_talkbackview.cpp debug\moc_loginbackgroundform.cpp debug\moc_loginform.cpp debug\moc_qchosecurriculumview.cpp debug\moc_qcompareview.cpp debug\moc_listen.cpp debug\moc_speak.cpp debug\moc_qtouchtrainview.cpp debug\moc_qsetsystemview.cpp debug\moc_setitemview.cpp debug\moc_qmanager.cpp debug\moc_net_server.cpp debug\moc_tellclientconnected.cpp debug\moc_m_ftp_manager.cpp debug\moc_qdatabase.cpp debug\moc_qgettreecontentfromweb.cpp debug\moc_qparseinfofromweb.cpp debug\moc_aboutform.cpp debug\moc_myswitchbutton.cpp debug\moc_qflashtree.cpp debug\moc_qcoursewareinfo.cpp debug\moc_qparsecoursewarefileop.cpp debug\moc_qcsorder.cpp debug\moc_qpalpationpracticetip.cpp
+compiler_moc_header_make_all: debug\moc_qtrainmainwindow.cpp debug\moc_auscultation_widget.cpp debug\moc_case_widget.cpp debug\moc_courseware_widget.cpp debug\moc_main_tab.cpp debug\moc_talkbackview.cpp debug\moc_loginbackgroundform.cpp debug\moc_loginform.cpp debug\moc_qchosecurriculumview.cpp debug\moc_qcompareview.cpp debug\moc_listen.cpp debug\moc_speak.cpp debug\moc_qtouchtrainview.cpp debug\moc_qsetsystemview.cpp debug\moc_setitemview.cpp debug\moc_qmanager.cpp debug\moc_net_server.cpp debug\moc_tellclientconnected.cpp debug\moc_m_ftp_manager.cpp debug\moc_qdatabase.cpp debug\moc_qgettreecontentfromweb.cpp debug\moc_qparseinfofromweb.cpp debug\moc_aboutform.cpp debug\moc_myswitchbutton.cpp debug\moc_qflashtree.cpp debug\moc_qcoursewareinfo.cpp debug\moc_qparsecoursewarefileop.cpp debug\moc_qcsorder.cpp debug\moc_qpalpationpracticetip.cpp debug\moc_qmaxwidget.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) debug\moc_qtrainmainwindow.cpp debug\moc_auscultation_widget.cpp debug\moc_case_widget.cpp debug\moc_courseware_widget.cpp debug\moc_main_tab.cpp debug\moc_talkbackview.cpp debug\moc_loginbackgroundform.cpp debug\moc_loginform.cpp debug\moc_qchosecurriculumview.cpp debug\moc_qcompareview.cpp debug\moc_listen.cpp debug\moc_speak.cpp debug\moc_qtouchtrainview.cpp debug\moc_qsetsystemview.cpp debug\moc_setitemview.cpp debug\moc_qmanager.cpp debug\moc_net_server.cpp debug\moc_tellclientconnected.cpp debug\moc_m_ftp_manager.cpp debug\moc_qdatabase.cpp debug\moc_qgettreecontentfromweb.cpp debug\moc_qparseinfofromweb.cpp debug\moc_aboutform.cpp debug\moc_myswitchbutton.cpp debug\moc_qflashtree.cpp debug\moc_qcoursewareinfo.cpp debug\moc_qparsecoursewarefileop.cpp debug\moc_qcsorder.cpp debug\moc_qpalpationpracticetip.cpp
+	-$(DEL_FILE) debug\moc_qtrainmainwindow.cpp debug\moc_auscultation_widget.cpp debug\moc_case_widget.cpp debug\moc_courseware_widget.cpp debug\moc_main_tab.cpp debug\moc_talkbackview.cpp debug\moc_loginbackgroundform.cpp debug\moc_loginform.cpp debug\moc_qchosecurriculumview.cpp debug\moc_qcompareview.cpp debug\moc_listen.cpp debug\moc_speak.cpp debug\moc_qtouchtrainview.cpp debug\moc_qsetsystemview.cpp debug\moc_setitemview.cpp debug\moc_qmanager.cpp debug\moc_net_server.cpp debug\moc_tellclientconnected.cpp debug\moc_m_ftp_manager.cpp debug\moc_qdatabase.cpp debug\moc_qgettreecontentfromweb.cpp debug\moc_qparseinfofromweb.cpp debug\moc_aboutform.cpp debug\moc_myswitchbutton.cpp debug\moc_qflashtree.cpp debug\moc_qcoursewareinfo.cpp debug\moc_qparsecoursewarefileop.cpp debug\moc_qcsorder.cpp debug\moc_qpalpationpracticetip.cpp debug\moc_qmaxwidget.cpp
 debug\moc_qtrainmainwindow.cpp: F:\qt_32\5.7\msvc2015\include\QtWidgets\QWidget \
 		F:\qt_32\5.7\msvc2015\include\QtWidgets\qwidget.h \
 		F:\qt_32\5.7\msvc2015\include\QtGui\qwindowdefs.h \
@@ -702,6 +708,14 @@ debug\moc_qtrainmainwindow.cpp: F:\qt_32\5.7\msvc2015\include\QtWidgets\QWidget 
 		qloudauscultatecontrolvir.h \
 		qgettreecontentfromweb.h \
 		qparseinfofromweb.h \
+		qpalpationpracticetip.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\QMovie \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qmovie.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qimagereader.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qimageiohandler.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qplugin.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qpointer.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qfactoryinterface.h \
 		F:\qt_32\5.7\msvc2015\include\QtWebEngineWidgets\QWebEngineView \
 		F:\qt_32\5.7\msvc2015\include\QtWebEngineWidgets\qwebengineview.h \
 		F:\qt_32\5.7\msvc2015\include\QtGui\qpainter.h \
@@ -3650,6 +3664,110 @@ debug\moc_qpalpationpracticetip.cpp: F:\qt_32\5.7\msvc2015\include\QtWidgets\QDi
 		F:\qt_32\5.7\msvc2015\bin\moc.exe
 	F:\qt_32\5.7\msvc2015\bin\moc.exe $(DEFINES) -D_MSC_VER=1900 -D_WIN32 -IF:/qt_32/5.7/msvc2015/mkspecs/win32-msvc2015 -IE:/TeacherGit -IE:/TeacherGit/include -IF:/qt_32/5.7/msvc2015/include -IF:/qt_32/5.7/msvc2015/include/QtMultimedia -IF:/qt_32/5.7/msvc2015/include/ActiveQt -IF:/qt_32/5.7/msvc2015/include/QtWebEngineWidgets -IF:/qt_32/5.7/msvc2015/include/QtWidgets -IF:/qt_32/5.7/msvc2015/include/QtWebEngineCore -IF:/qt_32/5.7/msvc2015/include/QtQuick -IF:/qt_32/5.7/msvc2015/include/QtGui -IF:/qt_32/5.7/msvc2015/include/QtANGLE -IF:/qt_32/5.7/msvc2015/include/QtWebChannel -IF:/qt_32/5.7/msvc2015/include/QtQml -IF:/qt_32/5.7/msvc2015/include/QtNetwork -IF:/qt_32/5.7/msvc2015/include/QtSerialPort -IF:/qt_32/5.7/msvc2015/include/QtSql -IF:/qt_32/5.7/msvc2015/include/QtPositioning -IF:/qt_32/5.7/msvc2015/include/QtCore qpalpationpracticetip.h -o debug\moc_qpalpationpracticetip.cpp
 
+debug\moc_qmaxwidget.cpp: F:\qt_32\5.7\msvc2015\include\QtWidgets\QWidget \
+		F:\qt_32\5.7\msvc2015\include\QtWidgets\qwidget.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qwindowdefs.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qglobal.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qconfig.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qfeatures.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qsystemdetection.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qprocessordetection.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qcompilerdetection.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qtypeinfo.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qtypetraits.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qisenum.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qsysinfo.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qlogging.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qflags.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qatomic.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qbasicatomic.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qatomic_bootstrap.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qgenericatomic.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qatomic_cxx11.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qatomic_msvc.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qglobalstatic.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qmutex.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qnumeric.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qversiontagging.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qobjectdefs.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qnamespace.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qobjectdefs_impl.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qwindowdefs_win.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qobject.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qstring.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qchar.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qbytearray.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qrefcount.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qarraydata.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qstringbuilder.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qlist.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qalgorithms.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qiterator.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qhashfunctions.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qpair.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qbytearraylist.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qstringlist.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qregexp.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qstringmatcher.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qcoreevent.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qscopedpointer.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qmetatype.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qvarlengtharray.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qcontainerfwd.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qobject_impl.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qmargins.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qpaintdevice.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qrect.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qsize.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qpoint.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qpalette.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qcolor.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qrgb.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qrgba64.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qbrush.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qvector.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qmatrix.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qpolygon.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qregion.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qdatastream.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qiodevice.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qline.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qtransform.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qpainterpath.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qimage.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qpixelformat.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qpixmap.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qsharedpointer.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qshareddata.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qhash.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qsharedpointer_impl.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qfont.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qfontmetrics.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qfontinfo.h \
+		F:\qt_32\5.7\msvc2015\include\QtWidgets\qsizepolicy.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qcursor.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qkeysequence.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qevent.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qvariant.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qmap.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qdebug.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qtextstream.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qlocale.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qset.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qcontiguouscache.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qurl.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qurlquery.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qfile.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qfiledevice.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qvector2d.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qtouchdevice.h \
+		F:\qt_32\5.7\msvc2015\include\ActiveQt\QAxWidget \
+		F:\qt_32\5.7\msvc2015\include\ActiveQt\qaxwidget.h \
+		F:\qt_32\5.7\msvc2015\include\ActiveQt\qaxbase.h \
+		qmaxwidget.h \
+		F:\qt_32\5.7\msvc2015\bin\moc.exe
+	F:\qt_32\5.7\msvc2015\bin\moc.exe $(DEFINES) -D_MSC_VER=1900 -D_WIN32 -IF:/qt_32/5.7/msvc2015/mkspecs/win32-msvc2015 -IE:/TeacherGit -IE:/TeacherGit/include -IF:/qt_32/5.7/msvc2015/include -IF:/qt_32/5.7/msvc2015/include/QtMultimedia -IF:/qt_32/5.7/msvc2015/include/ActiveQt -IF:/qt_32/5.7/msvc2015/include/QtWebEngineWidgets -IF:/qt_32/5.7/msvc2015/include/QtWidgets -IF:/qt_32/5.7/msvc2015/include/QtWebEngineCore -IF:/qt_32/5.7/msvc2015/include/QtQuick -IF:/qt_32/5.7/msvc2015/include/QtGui -IF:/qt_32/5.7/msvc2015/include/QtANGLE -IF:/qt_32/5.7/msvc2015/include/QtWebChannel -IF:/qt_32/5.7/msvc2015/include/QtQml -IF:/qt_32/5.7/msvc2015/include/QtNetwork -IF:/qt_32/5.7/msvc2015/include/QtSerialPort -IF:/qt_32/5.7/msvc2015/include/QtSql -IF:/qt_32/5.7/msvc2015/include/QtPositioning -IF:/qt_32/5.7/msvc2015/include/QtCore qmaxwidget.h -o debug\moc_qmaxwidget.cpp
+
 compiler_dumpcpp_impl_make_all:
 compiler_dumpcpp_impl_clean:
 compiler_moc_source_make_all:
@@ -3989,6 +4107,14 @@ debug\main.obj: main.cpp qtrainmainwindow.h \
 		qloudauscultatecontrolvir.h \
 		qgettreecontentfromweb.h \
 		qparseinfofromweb.h \
+		qpalpationpracticetip.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\QMovie \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qmovie.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qimagereader.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qimageiohandler.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qplugin.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qpointer.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qfactoryinterface.h \
 		F:\qt_32\5.7\msvc2015\include\QtWebEngineWidgets\QWebEngineView \
 		F:\qt_32\5.7\msvc2015\include\QtWebEngineWidgets\qwebengineview.h \
 		F:\qt_32\5.7\msvc2015\include\QtGui\qpainter.h \
@@ -4010,13 +4136,6 @@ debug\main.obj: main.cpp qtrainmainwindow.h \
 		F:\qt_32\5.7\msvc2015\include\QtSql\QSqlQuery \
 		F:\qt_32\5.7\msvc2015\include\QtSql\qsqlquery.h \
 		F:\qt_32\5.7\msvc2015\include\QtWidgets\QListWidget \
-		F:\qt_32\5.7\msvc2015\include\QtGui\QMovie \
-		F:\qt_32\5.7\msvc2015\include\QtGui\qmovie.h \
-		F:\qt_32\5.7\msvc2015\include\QtGui\qimagereader.h \
-		F:\qt_32\5.7\msvc2015\include\QtGui\qimageiohandler.h \
-		F:\qt_32\5.7\msvc2015\include\QtCore\qplugin.h \
-		F:\qt_32\5.7\msvc2015\include\QtCore\qpointer.h \
-		F:\qt_32\5.7\msvc2015\include\QtCore\qfactoryinterface.h \
 		F:\qt_32\5.7\msvc2015\include\QtWidgets\QApplication \
 		F:\qt_32\5.7\msvc2015\include\QtWidgets\qapplication.h \
 		F:\qt_32\5.7\msvc2015\include\QtWidgets\qdesktopwidget.h \
@@ -4300,6 +4419,14 @@ debug\qtrainmainwindow.obj: qtrainmainwindow.cpp qtrainmainwindow.h \
 		qloudauscultatecontrolvir.h \
 		qgettreecontentfromweb.h \
 		qparseinfofromweb.h \
+		qpalpationpracticetip.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\QMovie \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qmovie.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qimagereader.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qimageiohandler.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qplugin.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qpointer.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qfactoryinterface.h \
 		F:\qt_32\5.7\msvc2015\include\QtWebEngineWidgets\QWebEngineView \
 		F:\qt_32\5.7\msvc2015\include\QtWebEngineWidgets\qwebengineview.h \
 		F:\qt_32\5.7\msvc2015\include\QtGui\qpainter.h \
@@ -4321,7 +4448,9 @@ debug\qtrainmainwindow.obj: qtrainmainwindow.cpp qtrainmainwindow.h \
 		F:\qt_32\5.7\msvc2015\include\QtWidgets\qscrollbar.h \
 		F:\qt_32\5.7\msvc2015\include\QtWidgets\QTreeWidgetItemIterator \
 		F:\qt_32\5.7\msvc2015\include\QtCore\QFileInfo \
-		F:\qt_32\5.7\msvc2015\include\QtCore\qfileinfo.h
+		F:\qt_32\5.7\msvc2015\include\QtCore\qfileinfo.h \
+		F:\qt_32\5.7\msvc2015\include\QtWidgets\QDesktopWidget \
+		F:\qt_32\5.7\msvc2015\include\QtWidgets\qdesktopwidget.h
 
 debug\auscultation_widget.obj: auscultation_widget.cpp auscultation_widget.h \
 		F:\qt_32\5.7\msvc2015\include\QtWidgets\QWidget \
@@ -6164,7 +6293,9 @@ debug\setitemview.obj: setitemview.cpp setitemview.h \
 		F:\qt_32\5.7\msvc2015\include\QtCore\qdir.h \
 		F:\qt_32\5.7\msvc2015\include\QtCore\qfileinfo.h \
 		F:\qt_32\5.7\msvc2015\include\QtWidgets\QMessageBox \
-		F:\qt_32\5.7\msvc2015\include\QtWidgets\qmessagebox.h
+		F:\qt_32\5.7\msvc2015\include\QtWidgets\qmessagebox.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\QProcess \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qprocess.h
 
 debug\qmanager.obj: qmanager.cpp qmanager.h \
 		F:\qt_32\5.7\msvc2015\include\QtCore\QObject \
@@ -8216,6 +8347,114 @@ debug\qpalpationpracticetip.obj: qpalpationpracticetip.cpp qpalpationpracticetip
 		F:\qt_32\5.7\msvc2015\include\QtCore\qfactoryinterface.h \
 		ui_qpalpationpracticetip.h
 
+debug\qmaxwidget.obj: qmaxwidget.cpp qmaxwidget.h \
+		F:\qt_32\5.7\msvc2015\include\QtWidgets\QWidget \
+		F:\qt_32\5.7\msvc2015\include\QtWidgets\qwidget.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qwindowdefs.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qglobal.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qconfig.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qfeatures.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qsystemdetection.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qprocessordetection.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qcompilerdetection.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qtypeinfo.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qtypetraits.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qisenum.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qsysinfo.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qlogging.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qflags.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qatomic.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qbasicatomic.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qatomic_bootstrap.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qgenericatomic.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qatomic_cxx11.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qatomic_msvc.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qglobalstatic.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qmutex.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qnumeric.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qversiontagging.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qobjectdefs.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qnamespace.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qobjectdefs_impl.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qwindowdefs_win.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qobject.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qstring.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qchar.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qbytearray.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qrefcount.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qarraydata.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qstringbuilder.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qlist.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qalgorithms.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qiterator.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qhashfunctions.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qpair.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qbytearraylist.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qstringlist.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qregexp.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qstringmatcher.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qcoreevent.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qscopedpointer.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qmetatype.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qvarlengtharray.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qcontainerfwd.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qobject_impl.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qmargins.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qpaintdevice.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qrect.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qsize.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qpoint.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qpalette.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qcolor.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qrgb.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qrgba64.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qbrush.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qvector.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qmatrix.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qpolygon.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qregion.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qdatastream.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qiodevice.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qline.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qtransform.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qpainterpath.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qimage.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qpixelformat.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qpixmap.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qsharedpointer.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qshareddata.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qhash.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qsharedpointer_impl.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qfont.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qfontmetrics.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qfontinfo.h \
+		F:\qt_32\5.7\msvc2015\include\QtWidgets\qsizepolicy.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qcursor.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qkeysequence.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qevent.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qvariant.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qmap.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qdebug.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qtextstream.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qlocale.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qset.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qcontiguouscache.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qurl.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qurlquery.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qfile.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qfiledevice.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qvector2d.h \
+		F:\qt_32\5.7\msvc2015\include\QtGui\qtouchdevice.h \
+		F:\qt_32\5.7\msvc2015\include\ActiveQt\QAxWidget \
+		F:\qt_32\5.7\msvc2015\include\ActiveQt\qaxwidget.h \
+		F:\qt_32\5.7\msvc2015\include\ActiveQt\qaxbase.h \
+		define.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\QVariant \
+		F:\qt_32\5.7\msvc2015\include\QtCore\QString \
+		F:\qt_32\5.7\msvc2015\include\QtCore\QCoreApplication \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qcoreapplication.h \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qeventloop.h
+
 debug\qrc_resource.obj: debug\qrc_resource.cpp 
 
 debug\moc_qtrainmainwindow.obj: debug\moc_qtrainmainwindow.cpp 
@@ -8275,6 +8514,8 @@ debug\moc_qparsecoursewarefileop.obj: debug\moc_qparsecoursewarefileop.cpp
 debug\moc_qcsorder.obj: debug\moc_qcsorder.cpp 
 
 debug\moc_qpalpationpracticetip.obj: debug\moc_qpalpationpracticetip.cpp 
+
+debug\moc_qmaxwidget.obj: debug\moc_qmaxwidget.cpp 
 
 ####### Install
 

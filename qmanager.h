@@ -27,11 +27,16 @@ public:
     void ALLTeachLocalFlash(QString &FileName);
     void ALLTeachLocalCase(QString &ID);
     void ALLTeachWork(QString &work);
+
+
+
 public slots:
     void closeClientWindow();
     void doAllowTalk(QList<int> id_list,bool cmd);
     void speakAndlistenInit();
     void controllisten(bool listen);
+
+    void pattern(QString str);
 signals:
     void ClientState(int ,int);
     void startListen();

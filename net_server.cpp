@@ -1,6 +1,7 @@
 #include "net_server.h"
 #include <qDebug>
 #include <QMapIterator>
+#include <QSettings>
 net_server_socket::net_server_socket()
 {
     qDebug()<<__FUNCTION__;
@@ -54,15 +55,18 @@ void net_server::incomingConnection(qintptr handle)  //虚函数，有tcp请求时会触发
 {
 
     net_server_socket *socket = new net_server_socket;
+
     if(!socket->setSocketDescriptor(handle))
     {
         qDebug()<<socket->errorString();
         socket->deleteLater();
         return;
     }
-    socket->write(TellClientConnectedSuucess());
-
-
+    QSettings *readconfig=new QSettings(APPPATH, QSettings::IniFormat);
+    QString str=readconfig->value("System_Param/HeartAuscultateType").toString()+QString(":")+readconfig->value("System_Param/LoudSoundType").toString();
+    delete readconfig;
+    qDebug()<<__FUNCTION__<<str;
+    socket->write(TellClientConnectedSuucess(str));
     socketListmutex.lock();
     socketlist.append(socket);
     socketListmutex.unlock();
@@ -85,9 +89,11 @@ void net_server::onRecvmsg(QByteArray &recvmsg)
         {
             return;
         }
+
          QString type=object.value("Type").toString();
          QString cmd=object.value("cmd").toString();
          QString data=object.value("data").toString();
+         qDebug()<<__FUNCTION__<<type<<cmd<<data;
          if(type==QString("string"))
          {
             if(cmd=="DeskID")
@@ -99,9 +105,7 @@ void net_server::onRecvmsg(QByteArray &recvmsg)
                           .arg(data.section(":",0,0))
                           .arg(data.section(":",1,1));
                 IpIdListmutex.lock();
-
                 clientIdIp_List.append(info);
-
                 IpIdListmutex.unlock();
                 emit NotifyClientConnected(data.section(":",0,0).toInt(),ONLINE);
 
@@ -185,14 +189,13 @@ void net_server::sendMsgtoClient(QByteArray &msg)
  socketListmutex.unlock();
 }
 
-QByteArray net_server::TellClientConnectedSuucess()
+QByteArray net_server::TellClientConnectedSuucess(QString &str)
 {
     jobject.insert("Type",QString("string"));
-    jobject.insert("cmd",QString("NULL"));
-    jobject.insert("data","CLIENTCONNECTEDSUCCESS");
+    jobject.insert("cmd","CLIENTCONNECTEDSUCCESS");
+    jobject.insert("data",str);
     jdocument.setObject(jobject);
-    QByteArray str=jdocument.toJson(QJsonDocument::Compact);
-    return str;
+    return jdocument.toJson(QJsonDocument::Compact);
 }
 
 /*
@@ -327,7 +330,17 @@ void net_server::ALLTeachWork(QString &work)
     jdocument.setObject(jobject);
     sendbyte=jdocument.toJson(QJsonDocument::Compact);
     sendMsgtoClient(sendbyte);
-//    qDebug()<<__FUNCTION__<<"+++++++++++++"<<sendbyte;
+    sendbyte.clear();
+}
+
+void net_server::ALLTeacherPatter(QString patter)
+{
+    jobject.insert("Type",QString("Patter"));
+    jobject.insert("cmd",patter);
+    jobject.insert("data",QString("NULL"));
+    jdocument.setObject(jobject);
+    sendbyte=jdocument.toJson(QJsonDocument::Compact);
+    sendMsgtoClient(sendbyte);
     sendbyte.clear();
 }
 

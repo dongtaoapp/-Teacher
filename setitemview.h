@@ -15,6 +15,7 @@ class SetItemView : public QDialog
 public:
     explicit SetItemView(QWidget *parent = 0);
     ~SetItemView();
+    void ReadInit();
     void Init();
     void btnInit();
 public slots:
@@ -23,13 +24,21 @@ public slots:
     void onBtn3();
     void onOkbtn();
     void oncancelBtn();
+    void reload();
 signals:
     void changPag(int pag);
+    void reloadProcess();
+
+    void pattern(QString );
 private:
     Ui::SetItemView *ui;
     QSettings *configInit;
 
-    int pag1_radiobtn,pag2_radiobtn;
+    int pag1_radiobtn,pag2_radiobtn,deskNumber,reloadTime;
+    QString webIP;
+
+
+
 
 };
 

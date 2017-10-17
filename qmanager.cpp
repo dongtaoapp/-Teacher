@@ -26,6 +26,11 @@ void QManager::managerInit()
 {
     m_server.setserverlisten(666666);
 }
+
+void QManager::pattern(QString str)
+{
+    m_server.ALLTeacherPatter(str);
+}
 ///************老师机speak初始化**************/
 void QManager::speakAndlistenInit()
 {

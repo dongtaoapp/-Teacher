@@ -61,7 +61,8 @@ SOURCES += main.cpp\
     qparsecoursewarefileop.cpp \
     qparsecousewarefile.cpp \
     qcsorder.cpp \
-    qpalpationpracticetip.cpp
+    qpalpationpracticetip.cpp \
+    qmaxwidget.cpp
 
 HEADERS  += qtrainmainwindow.h \
     auscultation_widget.h \
@@ -110,7 +111,8 @@ HEADERS  += qtrainmainwindow.h \
     qparsecoursewarefileop.h \
     qparsecousewarefile.h \
     qcsorder.h \
-    qpalpationpracticetip.h
+    qpalpationpracticetip.h \
+    qmaxwidget.h
 
 FORMS    += qtrainmainwindow.ui \
     auscultation_widget.ui \

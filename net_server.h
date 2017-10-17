@@ -44,7 +44,7 @@ public:
     net_server(QObject *parent=Q_NULLPTR);
     ~net_server();
     void sendString(QString &str);//发送字符串
-    QByteArray TellClientConnectedSuucess();//告诉学生机已经连接成功
+    QByteArray TellClientConnectedSuucess(QString &str);//告诉学生机已经连接成功
     bool setserverlisten(quint16 port);//设置服务端监听的端口
 
     void sendMsgtoClient(QByteArray &msg);
@@ -82,7 +82,7 @@ public slots:
     void ALLTrachLocalFlash(QString &flashName);//加载本地flash
     void ALLTeachLocalCase(QString &ID);
     void ALLTeachWork(QString &work);//控制是否播放flash
-
+    void ALLTeacherPatter(QString patter);
     void ondisconnected(qintptr descriptor);
 
     void onRecvmsg(QByteArray &recvmsg);

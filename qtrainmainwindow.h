@@ -13,9 +13,9 @@
 #include "myswitchbutton.h"
 #include "qflashtree.h"
 #include "m_ftp_manager.h"
+#include "qmaxwidget.h"
 #include <QLabel>
 #include <QPushButton>
-#include <QAxWidget>
 #include <QStackedWidget>
 #include <QLineEdit>
 #include <QPushButton>
@@ -183,7 +183,7 @@ private:
     main_tab *m_tab;
     TalkbackView *talkwindow;
     m_searchLineEdit *searchEdit;
-    QAxWidget *flash_widget;//加载flahs控件
+    QMAxWidget *flash_widget;//加载flahs控件
     QWebEngineView *web_PPt;//加载web ppt控件
 
 

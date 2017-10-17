@@ -14,6 +14,7 @@
 #include <QMessageBox>
 #include <QFileInfo>
 #include <QMessageBox>
+#include <QDesktopWidget>
 QString string111;
 void parentExpand(QTreeWidgetItem *item)
 {
@@ -85,11 +86,6 @@ void m_searchLineEdit::onSearch()
    }
 
 }
-
-
-
-
-
 /*****************主界面****************************/
 QTrainMainWindow::QTrainMainWindow(QWidget *parent) :
     QWidget(parent),
@@ -138,7 +134,11 @@ QTrainMainWindow::QTrainMainWindow(QWidget *parent) :
     connect(sheduleBtn,SIGNAL(clicked(bool)),sheduleView,SLOT(exec()));
     connect(sheduleView,SIGNAL(CLNum(ClassScheduleData &)),this,SLOT(setCurriculumID(ClassScheduleData &)));
     connect(sysTemBtn,SIGNAL(clicked(bool)),systemView,SLOT(show()));
+
+    //-------------------
     connect(systemView,SIGNAL(onSetSystemCloseComputer()),&m_manager,SLOT(closeClientWindow()));
+    connect(systemView,SIGNAL(pattern(QString)),&m_manager,SLOT(pattern(QString)));
+
     connect(touchTrain,SIGNAL(onitemClicked(QString &,int)),this,SLOT(PalpationTraining(QString &,int)));
     connect(this,SIGNAL(LocalPath(QString &)),this,SLOT(setPathshow(QString&)));
     //-------------------套餐信号槽
@@ -233,7 +233,7 @@ void QTrainMainWindow::InitShow()
 void QTrainMainWindow::flashAction(QString cmd, QString data)
 {
     qDebug()<<__FUNCTION__<<cmd<<data;
-    flash_widget->dynamicCall("CallFunction(string)",FLASHPLAY);
+    flash_widget->StartPlay();
     play_btn->setStyleSheet("border-style:none;image:url(:/images/play_button_presed.png)");
     m_play=true;
     if(is_listen)
@@ -361,9 +361,8 @@ void QTrainMainWindow::windowInit()
     searchEdit=new m_searchLineEdit(this);
     searchEdit->setGeometry(133,34,228,26);
 
-    flash_widget=new QAxWidget(this);
+    flash_widget=new QMAxWidget(this);
     flash_widget->setGeometry(406,98,844,642);
-    flash_widget->setControl(QString::fromUtf8("{d27cdb6e-ae6d-11cf-96b8-444553540000}"));
     flash_widget->hide();
 
     web_PPt=new QWebEngineView(this);
@@ -457,7 +456,7 @@ void QTrainMainWindow::loadflash(QString &flashpath)
 {
     m_flashpath.clear();
     m_flashpath=flashpath;
-    flash_widget->dynamicCall("LoadMovie(long,string)",0,flashpath);
+    flash_widget->loadFlash(m_flashpath);
     isloadflash=true;
     m_play=false;
 
@@ -492,14 +491,14 @@ void QTrainMainWindow::onPlaybtn()
     }
     if(m_play)
     {
-        flash_widget->dynamicCall("CallFunction(string)",FLASHPAUSE);
+        flash_widget->PausePlay();
         play_btn->setStyleSheet("border-style:none;image:url(:/images/play_button.png)");
         m_play=false;
         return;
     }
     else if(!m_play)
     {
-       flash_widget->dynamicCall("CallFunction(string)",FLASHPLAY);
+        flash_widget->StartPlay();
        play_btn->setStyleSheet("border-style:none;image:url(:/images/play_button_presed.png)");
        m_play=true;
        return;
@@ -633,7 +632,7 @@ void QTrainMainWindow::ChangeTabStyleSheet(int index)
         {
              if(isloadflash)
              {
-                flash_widget->dynamicCall("CallFunction(string)",FLASHPAUSE);
+                 flash_widget->PausePlay();
                 loadflash(QString("reset"));
                 isloadflash=false;
              }
@@ -907,7 +906,7 @@ void QTrainMainWindow::OnFlashItemData(QCoursewareInfo &info)
 
 void QTrainMainWindow::OnwebItemData(userCourseware &info)
 {
-    flash_widget->dynamicCall("CallFunction(string)",FLASHPAUSE);//将flash 停止
+    flash_widget->PausePlay();
     play_btn->setStyleSheet(QString("image:url(:/images/play_button_gray.png)"));
     listen_btn->setStyleSheet(QString("image:url(:/images/auscultation_button.png_gray.png)"));
     speak_btn->setStyleSheet(QString("image:url(:/images/amplifyingauscultation_button.png_gray.png)"));
@@ -1035,6 +1034,8 @@ void QTrainMainWindow::setCurriculumID(ClassScheduleData &Data)
     }
     if(this->isHidden())
     {
+        QDesktopWidget* desktop =qApp->desktop();
+        move((desktop->width() - this->width())/2, (desktop->height() - this->height())/2);
         this->show();
         this->InitSoundControl();
     }
@@ -1068,9 +1069,20 @@ void QTrainMainWindow::doLoginsuccess(QString &name, QString &avatar)
 void QTrainMainWindow::InitSoundControl()
 {
     HWND hCurWnd = (HWND)winId();
+
+    QSettings *readType=new QSettings(APPPATH,QSettings::IniFormat);
+    qDebug()<<__FUNCTION__<<readType->value("System_Param/HeartAuscultateType").toBool()<<readType->value("System_Param/LoudSoundType").toBool();
+
+//参数1:窗口句柄 参数2:路径 参数3:心音模拟听诊 参数4:心肺扩音听诊
+    m_pSoundControl = new QSoundControl(hCurWnd,QCoreApplication::applicationDirPath(),
+                                        readType->value("System_Param/HeartAuscultateType").toBool(),
+                                        readType->value("System_Param/LoudSoundType").toBool());
+   delete readType;
+
+
   //  QSettings *readType=new QSettings(APPPATH,QSettings::IniFormat);
 
-    m_pSoundControl = new QSoundControl(hCurWnd,QCoreApplication::applicationDirPath());
+//    m_pSoundControl = new QSoundControl(hCurWnd,QCoreApplication::applicationDirPath());
 
             //   delete readType;
 }

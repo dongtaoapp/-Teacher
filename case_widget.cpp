@@ -50,10 +50,10 @@ case_widget::case_widget(QWidget *parent) :
     bbgs_all->resize(BTN_TAB_WIDTH,BTN_TAB_HEIGHT);
     bbgs_adult=new QPushButton(QStringLiteral("成人"),this);
     bbgs_adult->resize(BTN_TAB_WIDTH,BTN_TAB_HEIGHT);
-    bbgs_child=new QPushButton(QStringLiteral("儿童"),this);
-    bbgs_child->resize(BTN_TAB_WIDTH,BTN_TAB_HEIGHT);
-    bbgs_old=new QPushButton(QStringLiteral("老人"),this);
-    bbgs_old->resize(BTN_TAB_WIDTH,BTN_TAB_HEIGHT);
+//    bbgs_child=new QPushButton(QStringLiteral("儿童"),this);
+//    bbgs_child->resize(BTN_TAB_WIDTH,BTN_TAB_HEIGHT);
+//    bbgs_old=new QPushButton(QStringLiteral("老人"),this);
+//    bbgs_old->resize(BTN_TAB_WIDTH,BTN_TAB_HEIGHT);
     bbgs_hide();
 
     connect(ui->hs,SIGNAL(clicked(bool)),this,SLOT(onhsclicked(bool)));
@@ -72,8 +72,8 @@ case_widget::case_widget(QWidget *parent) :
 
     connect(bbgs_all,SIGNAL(clicked()),this,SLOT(on_bbgs_all()));
     connect(bbgs_adult,SIGNAL(clicked()),this,SLOT(on_bbgs_adult()));
-    connect(bbgs_child,SIGNAL(clicked()),this,SLOT(on_bbgs_child()));
-    connect(bbgs_old,SIGNAL(clicked()),this,SLOT(on_bbgs_old()));
+//    connect(bbgs_child,SIGNAL(clicked()),this,SLOT(on_bbgs_child()));
+//    connect(bbgs_old,SIGNAL(clicked()),this,SLOT(on_bbgs_old()));
 
 }
 
@@ -103,9 +103,9 @@ void case_widget::btnInit()
     abs_child->setStyleSheet(QString("image:url(:/images/a.png)"));
 
     bbgs_all->setStyleSheet(QString("image:url(:/images/a.png)"));
-    bbgs_old->setStyleSheet(QString("image:url(:/images/a.png)"));
+//    bbgs_old->setStyleSheet(QString("image:url(:/images/a.png)"));
     bbgs_adult->setStyleSheet(QString("image:url(:/images/a.png)"));
-    bbgs_child->setStyleSheet(QString("image:url(:/images/a.png)"));
+//    bbgs_child->setStyleSheet(QString("image:url(:/images/a.png)"));
 
 }
 
@@ -228,8 +228,8 @@ void case_widget::bbgs_hide()
 {
     bbgs_adult->hide();
     bbgs_all->hide();
-    bbgs_old->hide();
-    bbgs_child->hide();
+//    bbgs_old->hide();
+//    bbgs_child->hide();
 
 
 }
@@ -238,8 +238,8 @@ void case_widget::bbgs_show()
 
     bbgs_adult->show();
     bbgs_all->show();
-    bbgs_old->show();
-    bbgs_child->show();
+//    bbgs_old->show();
+//    bbgs_child->show();
 
 }
 void case_widget::abs_hide()
@@ -281,8 +281,8 @@ void case_widget::bbgs_btn_place()
 {
   bbgs_all->move(0,BTN_TOP_BTN_HEIGHT*3+3);
   bbgs_adult->move(0,BTN_TAB_HEIGHT*1+BTN_TOP_BTN_HEIGHT*3+4);
-  bbgs_child->move(0,BTN_TAB_HEIGHT*2+BTN_TOP_BTN_HEIGHT*3+5);
-  bbgs_old->move(0,BTN_TAB_HEIGHT*3+BTN_TOP_BTN_HEIGHT*3+6);
+//  bbgs_child->move(0,BTN_TAB_HEIGHT*2+BTN_TOP_BTN_HEIGHT*3+5);
+//  bbgs_old->move(0,BTN_TAB_HEIGHT*3+BTN_TOP_BTN_HEIGHT*3+6);
 }
 
 void case_widget::on_hs_all()
@@ -350,18 +350,18 @@ void case_widget::on_bbgs_adult()
     bbgs_adult->setStyleSheet(QString("image:url(:/images/clicked.png)"));
     emit case_btn_id(ID_BBGS_ADULT_CASE);
 }
-void case_widget::on_bbgs_child()
-{
-    btnInit();
-    bbgs_child->setStyleSheet(QString("image:url(:/images/clicked.png)"));
-    emit case_btn_id(ID_BBGS_CHILD_CASE);
-}
-void case_widget::on_bbgs_old()
-{
-    btnInit();
-    bbgs_old->setStyleSheet(QString("image:url(:/images/clicked.png)"));
-    emit case_btn_id(ID_BBGS_OLD_CASE);
-}
+//void case_widget::on_bbgs_child()
+//{
+//    btnInit();
+//    bbgs_child->setStyleSheet(QString("image:url(:/images/clicked.png)"));
+//    emit case_btn_id(ID_BBGS_CHILD_CASE);
+//}
+//void case_widget::on_bbgs_old()
+//{
+//    btnInit();
+//    bbgs_old->setStyleSheet(QString("image:url(:/images/clicked.png)"));
+//    emit case_btn_id(ID_BBGS_OLD_CASE);
+//}
 
 void case_widget::setBtnFouse(int index)
 {

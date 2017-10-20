@@ -2,6 +2,7 @@
 #include <qDebug>
 #include <QMapIterator>
 #include <QSettings>
+extern bool Global_Synchronous;
 net_server_socket::net_server_socket()
 {
     qDebug()<<__FUNCTION__;
@@ -63,9 +64,17 @@ void net_server::incomingConnection(qintptr handle)  //虚函数，有tcp请求时会触发
         return;
     }
     QSettings *readconfig=new QSettings(APPPATH, QSettings::IniFormat);
-    QString str=readconfig->value("System_Param/HeartAuscultateType").toString()+QString(":")+readconfig->value("System_Param/LoudSoundType").toString();
+    QString str=readconfig->value("System_Param/HeartAuscultateType").toString()+
+            QString(":")+readconfig->value("System_Param/LoudSoundType").toString();
     delete readconfig;
-    qDebug()<<__FUNCTION__<<str;
+    if(Global_Synchronous)
+    {
+        str +=QString(":Synchronous");
+    }
+    if(!Global_Synchronous)
+    {
+        str +=QString(":NOSynchronous");
+    }
     socket->write(TellClientConnectedSuucess(str));
     socketListmutex.lock();
     socketlist.append(socket);
@@ -198,9 +207,6 @@ QByteArray net_server::TellClientConnectedSuucess(QString &str)
     return jdocument.toJson(QJsonDocument::Compact);
 }
 
-/*
- * 发送普通字符串
- */
 void net_server::sendString(QString &str)
 {
   jobject.insert("Type",QString("string"));

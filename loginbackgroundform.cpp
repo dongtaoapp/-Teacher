@@ -52,8 +52,11 @@ void LoginBackgroundForm::loadqss()
     file.close();
 
 }
-
-
+void LoginBackgroundForm::m_delete()
+{
+    this->hide();
+    this->deleteLater();
+}
 void LoginBackgroundForm::paintEvent(QPaintEvent *event)
 {
     Q_UNUSED(event);

@@ -9,14 +9,15 @@ TellClientConnected::TellClientConnected()
 TellClientConnected::~TellClientConnected()
 {
       qDebug()<<__FUNCTION__;
-    delete socket;
+      delete socket;
 }
 void TellClientConnected::my_send()
 {
-    if(times<5)
+    if(times<30)
     {
-        QByteArray datagram = "OFFLINECONNECT";
-        socket->writeDatagram(datagram.data(),datagram.size(),QHostAddress::Broadcast,1066);
+      QByteArray datagram="CONNECT_TEACHER";
+      int cc=  socket->writeDatagram(datagram,QHostAddress::Broadcast,1066);
+//        qDebug()<<__FUNCTION__<<cc;
         times++;
         return;
     }

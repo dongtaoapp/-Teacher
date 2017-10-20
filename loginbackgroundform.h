@@ -17,9 +17,11 @@ public:
 protected:
      void paintEvent(QPaintEvent *event);
      void closeEvent(QCloseEvent *event);
+public slots:
+     void m_delete();
 signals:
      void m_close();
-      void dologinSuccess(QString& name,QString& avatar);
+     void dologinSuccess(QString& name,QString& avatar);
 private:
     LoginForm *loginform;
     QLabel *backgroundLabel;

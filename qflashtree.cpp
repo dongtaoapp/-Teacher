@@ -12,13 +12,14 @@
 #include <QTreeWidgetItemIterator>
 #include <QMessageBox>
 #include <QPainter>
+QCoursewareInfo Default;
+QString m_CaseID;
 /*****************病例Item Widget**************/
 TreeItemWidget::TreeItemWidget(QWidget *parent,TreeItemWidgetType Type):
     QWidget(parent)
 {
       Casecolum0Clicked=false;
       setTreeItemWidgetType(Type);
-
       canadd=true;
 }
 
@@ -71,13 +72,14 @@ void TreeItemWidget::DiffSoundFull(bool aa)
 }
 
 
-
+//file:///E:/student/-/release/Resource/心脏听诊/听诊基础.swf
 
 /************课件 病例 鉴别听诊基础树形控件******************/
 qFlashTreeBase::qFlashTreeBase(QWidget *parent) :
     QTreeWidget(parent)
 {
     items=0;
+    m_default=QStringLiteral("/心脏听诊/听诊基础");
     treeInit();
     ReadJsonWorkhl=new QParseCourseWareFileOp;
     ReadJsonWorkABT=new QParseCourseWareFileOp;
@@ -95,6 +97,7 @@ void qFlashTreeBase::treeInit()
     this->setColumnCount(2);
     this->setAnimated(true);
     this->setCursor(Qt::PointingHandCursor);
+//    this->setStyleSheet(QString("font-size:15px; font-weight:500;"));
     QStringList headers;
     headers << QStringLiteral("flashname") <<QStringLiteral("flashNum")<<QStringLiteral("3");
     this->setHeaderLabels(headers);
@@ -146,33 +149,37 @@ void qFlashTreeBase::setCaseTree(CaseType type)
 {
     this->clear();
     this->setIndentation(15);
-    this->setColumnWidth(1,35);
-    this->setColumnWidth(0,223);
+    this->setColumnWidth(1,46);
+    this->setColumnWidth(0,212);
     TreeItemWidget_map.clear();
     if(lststardardCase.isEmpty())
     {
         qDebug()<<__FUNCTION__<<"no case Data";
         return;
     }
-    this->setStyleSheet(QString("QTreeView::item:selected{color:green;}"
-                                "QTreeView::item{border-style:sold;border-bottom:1px solid #bebebe;}"));
+    this->setStyleSheet(QString("QTreeView::item:selected{background-color:#c9cacb;}"
+                                "QTreeView::item:hover{background-color:#f1f2f3;}"
+                                "QTreeView::item{border-style:sold;border-bottom:1px solid #e7e8e9;}"));
     adult=new QTreeWidgetItem(this);
     adult->setSizeHint(0,QSize(900,20));
     adult->setData(0,Qt::UserRole+2,QString("Case"));
     adult->setData(1,Qt::UserRole+2,QString("Case"));
     adult->setText(0,QStringLiteral("成人"));
+    adult->setBackgroundColor(0,QColor(201,202,203));
 
     child=new QTreeWidgetItem(this);
     child->setData(0,Qt::UserRole+2,QString("Case"));
     child->setData(1,Qt::UserRole+2,QString("Case"));
     child->setSizeHint(0,QSize(9000,20));
     child->setText(0,QStringLiteral("儿童"));
+    child->setBackgroundColor(0,QColor(201,202,203));
 
     old=new QTreeWidgetItem(this);
     old->setData(0,Qt::UserRole+2,QString("Case"));
     old->setData(1,Qt::UserRole+2,QString("Case"));
     old->setSizeHint(0,QSize(9000,20));
     old->setText(0,QStringLiteral("老人"));
+    old->setBackgroundColor(0,QColor(201,202,203));
    if(type==CORDIOPHONY)
    {
      for(int i=0;i<lststardardCase.size();i++)
@@ -185,7 +192,7 @@ void qFlashTreeBase::setCaseTree(CaseType type)
         }
      }
    }
-   else if(type==LUNGAUSCULTATION)
+   if(type==LUNGAUSCULTATION)
    {
        for(int i=0;i<lststardardCase.size();i++)
        {
@@ -196,7 +203,7 @@ void qFlashTreeBase::setCaseTree(CaseType type)
           }
        }
    }
-   else if(type==Borborygmus)
+   if(type==Borborygmus)
    {
        for(int i=0;i<lststardardCase.size();i++)
        {
@@ -207,6 +214,8 @@ void qFlashTreeBase::setCaseTree(CaseType type)
           }
        }
    }
+   GetSonNum();
+   this->expandAll();
 }
 void qFlashTreeBase::addCaseChildItem(QString &Type,stardardCase &Case)
 {
@@ -230,9 +239,13 @@ void qFlashTreeBase::addCaseChildItem(QString &Type,stardardCase &Case)
     item->setText(0,Case.m_strName);
     TreeItemWidget *ItemWidget=new TreeItemWidget(this,TreeItemWidget::CaseWidget);
     this->setItemWidget(item,1,ItemWidget);
-    TreeItemWidget_map.insert(item->text(0),ItemWidget);
+    TreeItemWidget_map.insert(Case.m_strCaseId,ItemWidget);
+    CaseTreeItem_map.insert(Case.m_strCaseId.toInt(),item);
 }
-
+QTreeWidgetItem *qFlashTreeBase::GetCaseItem(int index)
+{
+    return CaseTreeItem_map.find(index).value();
+}
 //------------------鉴别听诊相关接口
 void qFlashTreeBase::GetDiffSoundData(QByteArray &Data)
 {
@@ -361,27 +374,43 @@ void qFlashTreeBase::GetLocalCouseWareECG()
     ReadJsonWorkECG->StartParseFile(CourseWareECGJson,&CourseWareECG_map);
     connect(ReadJsonWorkECG,SIGNAL(ParseFinish()),this,SLOT(GetCustomCouseDataFinsh()));
 }
+
 void qFlashTreeBase::setCouseWare(CourseWareType type)
 {
     this->clear();
     CouseWareStyleSheet();
     this->setIndentation(20);
-    this->setColumnWidth(1,15);
-    this->setColumnWidth(0,235);
+    this->setColumnWidth(1,46);
+    this->setColumnWidth(0,204);
     if(type==HeartLungCourse)
     {
         QMapIterator<QString, QCoursewareInfo> map(CourseWareHL_map);
         constructionCouseWareTree(map);
+        this->expandAll();
+//        if(DefaultPtr!=Q_NULLPTR)
+//        {
+//            this->setCurrentItem(DefaultPtr);
+//        }
     }
     else if(type==ABTCourse)
     {
         QMapIterator<QString, QCoursewareInfo> map(CourseWareABT_map);
         constructionCouseWareTree(map);
+        this->expandAll();
+//        if(DefaultPtr!=Q_NULLPTR)
+//        {
+//            this->setCurrentItem(DefaultPtr);
+//        }
     }
     else if(type==ECGCourse)
     {
         QMapIterator<QString, QCoursewareInfo> map(CourseWareECG_map);
         constructionCouseWareTree(map);
+        this->expandAll();
+//        if(DefaultPtr!=Q_NULLPTR)
+//        {
+//            this->setCurrentItem(DefaultPtr);
+//        }
     }
     SetCustomcoursewareTree(type);
 }
@@ -400,37 +429,28 @@ void qFlashTreeBase::constructionCouseWareTree(QMapIterator<QString, QCourseware
            item->setData(0,Qt::UserRole+2,QString("Coursewar"));
            item->setData(1,Qt::UserRole+2,QString("Coursewar"));
            item->setText(0,map.value().m_strCoursewareName);
-           if(map.value().sonClsaa!=0)
-           {
-                item->setText(1,QString::number(map.value().sonClsaa));
-           }
            Item_map.insert(map.key(),item);
-           this->expandItem(item);
         }
         if(count>1)
         {
-
            if(Item_map.find(map.key().section("/",0,count-1)).value()!=Q_NULLPTR)
            {
-                 QTreeWidgetItem *item=new QTreeWidgetItem( Item_map.find(map.key().section("/",0,count-1)).value());
+                QTreeWidgetItem *item=new QTreeWidgetItem( Item_map.find(map.key().section("/",0,count-1)).value());
                 item->setData(0,Qt::UserRole,QVariant::fromValue(map.value()));
                 item->setData(0,Qt::UserRole+1,QString("local"));
                 item->setData(0,Qt::UserRole+2,QString("Coursewar"));
                 item->setData(1,Qt::UserRole+2,QString("Coursewar"));
                 item->setText(0,map.value().m_strCoursewareName);
-                if(map.value().sonClsaa!=0)
-                {
-                    item->setText(1,QString::number(map.value().sonClsaa));
-                }
                 Item_map.insert(map.key(),item);
-           }
-                else
+                if(map.value().m_strTreeDir==m_default)
                 {
-                    qDebug()<<__FUNCTION__<<map.key();
-                    return;
+                    Default=map.value();
+//                    DefaultPtr=item;
                 }
+           }
         }
      }
+    GetSonNum();
 }
 void qFlashTreeBase::GetCustomCouseDataFinsh()
 {
@@ -447,7 +467,7 @@ void qFlashTreeBase::SetCustomcoursewareTree(CourseWareType type)
 {
    if(lstUserCourseware.size()==0)
    {
-        qDebug()<<"No CutomCouserware";
+        qDebug()<<"No CutomCouserware"<<"+++++++++++++++++++++++++++++++++++++++++";
         return;
    }
    QTreeWidgetItem *Customcourseware=new QTreeWidgetItem(this);
@@ -527,13 +547,17 @@ void qFlashTreeBase::CouseWareStyleSheet()
                                 "QTreeView::branch:has-children:!has-siblings:closed,QTreeView::branch:closed:has-children:has-siblings {border-image: none;image: url(:/images/coursewarelist_more_button.png);}"
                                 "QTreeView::branch:open:has-children:!has-siblings,QTreeView::branch:open:has-children:has-siblings  {border-image: none;image: url(:/images/coursewarelistm_retract_button.png);}"
                                 "QTreeView::item:hover{background-color:#4aabe9;}"
-                                "QTreeView::item{margin-top:5px;}"));
+                                "QTreeView::item{margin-top:5px;}"
+                                " color: white;"));
 }
+
 
 //------------------Item点击槽函数
 void qFlashTreeBase::doItemClicked(QTreeWidgetItem *item, int colum)
 {
 
+//   this->expandItem(item);
+//    item->setExpanded();
    QString data0 =item->data(0,Qt::UserRole+2).toString();
    QString data1 =item->data(1,Qt::UserRole+2).toString();
    /*****************点击课件Item*****************/
@@ -544,28 +568,30 @@ void qFlashTreeBase::doItemClicked(QTreeWidgetItem *item, int colum)
            QVariant data= item->data(0,Qt::UserRole);
            userCourseware info=data.value<userCourseware>();
            emit webItemData(info);
-           return;
+//           return;
        }
        else if(item->data(0,Qt::UserRole+1).toString()==QString("local"))
        {
-
            QVariant variant = item->data(0,Qt::UserRole);
            QCoursewareInfo info= variant.value<QCoursewareInfo>();
+           if(!info.m_CaseID.isEmpty())
+           {
+               m_CaseIDMsg=info.m_strTreeDir+QString(":")+info.m_CaseID;
+           }
            emit FlahsItemData(info);
-           return;
+//           return;
        }
    }
-
-
    /*********************点击病例Item**************************/
    else if(data0==QString("Case")||data1==QString("Case"))
    {
+
       stardardCase m_case=item->data(0,Qt::UserRole).value<stardardCase>();
-      QString m_ID=QString::number(colum)+QString(":")+m_case.m_strCaseId;
-      if(!m_case.m_strCaseId.isEmpty())
-      {
-        emit AllTeachCaseItem(m_ID);
-      }
+//      QString m_ID=QString::number(colum)+QString(":")+m_case.m_strCaseId;
+//      if(!m_case.m_strCaseId.isEmpty())
+//      {
+////        emit AllTeachCaseItem(m_ID);
+//      }
        TreeItemWidget *widget=static_cast<TreeItemWidget *>(this->itemWidget(item,1));
          if(widget==Q_NULLPTR)
          {
@@ -591,22 +617,29 @@ void qFlashTreeBase::doItemClicked(QTreeWidgetItem *item, int colum)
                 {
                     widget->changStyle(QString("QLabel{border-style:solid;border:1px solid #999999;background-color:#3099e5;border-radius:4px}"));
                     //病例Itme信号
-                   emit CaseItemData(m_case);//发送Item 点击信息
+                    emit CaseItemData(m_case);//发送Item 点击信息
+
                 }
-                else
-                {
-                    return;
-                }
+//                else
+//                {
+//                    return;
+//                }
             }
          }
    }
-   /*************点击鉴别听诊Item********************/
-//   else if(data0==QString("Diff")||data1==QString("Diff"))
-//   {
-//       QVariant data= item->data(0,Qt::UserRole);
-//       diffSound info=data.value<diffSound>();
-//       qDebug()<<info.m_strId;
-//   }
+   if(item->childCount()!=0)
+   {
+       bool expandll=item->isExpanded();
+       if(expandll)
+       {
+           item->setExpanded(false);
+       }
+       if(!expandll)
+       {
+           item->setExpanded(true);
+       }
+
+   }
 
 }
 
@@ -617,6 +650,32 @@ void qFlashTreeBase::OnTreeCtrlScroll(int n)
      this->header()->resizeSection(2,m_nMaxTreeCoursewareLen-220-this->horizontalScrollBar()->value());
 }
 
+void qFlashTreeBase::GetSonNum()
+{
+    QTreeWidgetItemIterator  it (this);
+    while (*it)
+    {
+        int count=(*it)->childCount();
+        if(count!=0)
+        {
+            QString num=QString::number(GetAllSonNum((*it)));
+            QString str=QString("(")+num+QString(")");
+            (*it)->setText(1,str);
+        }
+        it++;
+    }
+}
+int qFlashTreeBase::GetAllSonNum(QTreeWidgetItem *item)
+{
+    int aa=0;
+    aa +=item->childCount();
+    int cc=0;
+    for(int i=0;i<aa;i++)
+    {
+      cc += GetAllSonNum(item->child(i));
+    }
+    return aa+cc;
+}
 
 
 

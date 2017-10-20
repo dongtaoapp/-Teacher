@@ -25,7 +25,7 @@ public slots:
     void onMYItemclicked(QListWidgetItem *item);
 signals:
     void onSetSystemCloseComputer();//item µã»÷ÐÅºÅ
-    void pattern(QString );
+//    void pattern(QString );
 private:
     Ui::QSetSystemView *ui;
     QListWidgetItem *exitItem;

@@ -65,7 +65,7 @@
     <string notr="true">color:white</string>
    </property>
    <property name="text">
-    <string>   标准化听诊病例</string>
+    <string> 标准化听诊病例</string>
    </property>
   </widget>
  </widget>

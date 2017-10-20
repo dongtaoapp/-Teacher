@@ -151,6 +151,10 @@ QWidget#auscultation_widget,#case_widget,#courseware_widget{
 QWidget#QTrainMainWindow{
     background-color:white;
 }
+QWidget#LogonForm{
+    background-color:white;
+}
+
 QTreeWidget{
         border-style:solid;
         border-right:1px solid #ebedee;

@@ -678,6 +678,7 @@ debug\moc_qtrainmainwindow.cpp: F:\qt_32\5.7\msvc2015\include\QtWidgets\QWidget 
 		F:\qt_32\5.7\msvc2015\include\QtNetwork\QSslPreSharedKeyAuthenticator \
 		F:\qt_32\5.7\msvc2015\include\QtNetwork\qsslpresharedkeyauthenticator.h \
 		F:\qt_32\5.7\msvc2015\include\QtCore\QtGlobal \
+		qmaxwidget.h \
 		F:\qt_32\5.7\msvc2015\include\ActiveQt\QAxWidget \
 		F:\qt_32\5.7\msvc2015\include\ActiveQt\qaxwidget.h \
 		F:\qt_32\5.7\msvc2015\include\ActiveQt\qaxbase.h \
@@ -4077,6 +4078,7 @@ debug\main.obj: main.cpp qtrainmainwindow.h \
 		F:\qt_32\5.7\msvc2015\include\QtNetwork\QSslPreSharedKeyAuthenticator \
 		F:\qt_32\5.7\msvc2015\include\QtNetwork\qsslpresharedkeyauthenticator.h \
 		F:\qt_32\5.7\msvc2015\include\QtCore\QtGlobal \
+		qmaxwidget.h \
 		F:\qt_32\5.7\msvc2015\include\ActiveQt\QAxWidget \
 		F:\qt_32\5.7\msvc2015\include\ActiveQt\qaxwidget.h \
 		F:\qt_32\5.7\msvc2015\include\ActiveQt\qaxbase.h \
@@ -4389,6 +4391,7 @@ debug\qtrainmainwindow.obj: qtrainmainwindow.cpp qtrainmainwindow.h \
 		F:\qt_32\5.7\msvc2015\include\QtNetwork\QSslPreSharedKeyAuthenticator \
 		F:\qt_32\5.7\msvc2015\include\QtNetwork\qsslpresharedkeyauthenticator.h \
 		F:\qt_32\5.7\msvc2015\include\QtCore\QtGlobal \
+		qmaxwidget.h \
 		F:\qt_32\5.7\msvc2015\include\ActiveQt\QAxWidget \
 		F:\qt_32\5.7\msvc2015\include\ActiveQt\qaxwidget.h \
 		F:\qt_32\5.7\msvc2015\include\ActiveQt\qaxbase.h \
@@ -6495,7 +6498,9 @@ debug\net_server.obj: net_server.cpp net_server.h \
 		F:\qt_32\5.7\msvc2015\include\QtNetwork\QUdpSocket \
 		F:\qt_32\5.7\msvc2015\include\QtNetwork\qudpsocket.h \
 		F:\qt_32\5.7\msvc2015\include\QtCore\qDebug \
-		F:\qt_32\5.7\msvc2015\include\QtCore\QMapIterator
+		F:\qt_32\5.7\msvc2015\include\QtCore\QMapIterator \
+		F:\qt_32\5.7\msvc2015\include\QtCore\QSettings \
+		F:\qt_32\5.7\msvc2015\include\QtCore\qsettings.h
 
 debug\tellclientconnected.obj: tellclientconnected.cpp tellclientconnected.h \
 		F:\qt_32\5.7\msvc2015\include\QtCore\QObject \

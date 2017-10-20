@@ -58,7 +58,7 @@
     <string notr="true">color:white;</string>
    </property>
    <property name="text">
-    <string>      鉴别听诊</string>
+    <string>    鉴别听诊</string>
    </property>
   </widget>
  </widget>

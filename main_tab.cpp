@@ -31,15 +31,19 @@ void main_tab::insertTabwidget()
 
 void main_tab::setTypeFoucse(SetFoucseType type, int index)
 {
+
     switch(type)
     {
     case CouswareFoucse:
+        this->setCurrentIndex(MAIN_TAB_CO);
         co_widget->setBtnFoucse(index);
         break;
     case CaseFoucse:
+        this->setCurrentIndex(MAIN_TAB_CA);
         ca_widget->setBtnFouse(index);
         break;
     case DiffFoucse:
+        this->setCurrentIndex(MAIN_TAB_AU);
         au_widget->setBtnFoucse(index);
         break;
      default:

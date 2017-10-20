@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>130</height>
+    <width>478</width>
+    <height>99</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,9 +18,12 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>400</width>
-     <height>130</height>
+     <width>478</width>
+     <height>99</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-style:solid;</string>
    </property>
    <property name="text">
     <string/>

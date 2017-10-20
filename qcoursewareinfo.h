@@ -45,6 +45,7 @@ typedef struct QCoursewareInfo
     QString      m_strTreeDir;    //鏍戝舰缁撴瀯
     QString      m_strFlash;      //flash鏂囦欢鍚
     QString      m_strNetId;      //web瀵瑰簲鐨刬d
+    QString      m_CaseID;       //CaseID
     int          sonClsaa;
     QString      m_defalut_sound;
     QString      m_tremble_position;

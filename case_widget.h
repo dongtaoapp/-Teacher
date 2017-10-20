@@ -62,8 +62,8 @@ public slots:
 
     void on_bbgs_all();
     void on_bbgs_adult();
-    void on_bbgs_child();
-    void on_bbgs_old();
+//    void on_bbgs_child();
+//    void on_bbgs_old();
 
 
 private:
@@ -87,8 +87,8 @@ private:
 
     QPushButton *bbgs_all;
     QPushButton *bbgs_adult;
-    QPushButton *bbgs_child;
-    QPushButton *bbgs_old;
+//    QPushButton *bbgs_child;
+//    QPushButton *bbgs_old;
 };
 
 #endif // CASE_WIDGET_H

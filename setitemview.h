@@ -29,7 +29,7 @@ signals:
     void changPag(int pag);
     void reloadProcess();
 
-    void pattern(QString );
+//    void pattern(QString );
 private:
     Ui::SetItemView *ui;
     QSettings *configInit;

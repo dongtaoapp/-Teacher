@@ -36,7 +36,7 @@ public slots:
     void speakAndlistenInit();
     void controllisten(bool listen);
 
-    void pattern(QString str);
+//    void pattern(QString str);
 signals:
     void ClientState(int ,int);
     void startListen();

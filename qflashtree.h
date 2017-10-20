@@ -81,11 +81,14 @@ public:
 
     void setCouseWare(CourseWareType type);
     void constructionCouseWareTree(QMapIterator<QString, QCoursewareInfo> &map);
+    void GetSonNum();
+    int GetAllSonNum(QTreeWidgetItem *item);
+
 signals:
     void FlahsItemData(QCoursewareInfo &info);//本地flash Item信息
     void webItemData(userCourseware &);//自定义 课件Item 信息
     void CaseItemData(stardardCase &);//病例 Item 信息
-    void AllTeachCaseItem(QString &data);
+//    void AllTeachCaseItem(QString &data);
     void DiffSound(diffSound &);
     void TreeItemWidgetID(QString &);
 
@@ -107,12 +110,15 @@ public slots:
     //-----------------------病例相关接口
     void GetCaseData();
     void addCaseChildItem(QString &Type,stardardCase &Case);
-
+    QTreeWidgetItem *GetCaseItem(int index);
+    QString CaseIdMsg(){return m_CaseIDMsg;}
     //--------------鉴别听诊相关接口
     void GetDiffSoundData(QByteArray &Data);
     void DiffSoundItemClicked(QString &ID);
     void addDiffSoundChild(QTreeWidgetItem *fatherItem ,const diffSound &Data);
 public:
+//     QMap<QString,QTreeWidgetItem*> Item_map;//存储父节点
+
     //------------------课件相关变量
     QMap<QString,QCoursewareInfo> CourseWareHL_map; //心肺
     QMap<QString,QCoursewareInfo> CourseWareABT_map; //腹部
@@ -130,6 +136,9 @@ public:
     QTreeWidgetItem *old;
     QList<stardardCase> lststardardCase;//标准化病例链表
     QMap<QString,TreeItemWidget*> TreeItemWidget_map;//病例树形图子项Map;
+    QMap<int,QTreeWidgetItem*> CaseTreeItem_map;
+
+
     //---------------鉴别听诊变量
     QList<diffSound> lstDiffSound;//鉴别听诊信息链表
     QMap<QString,diffSound> DiffSoundTreewidget_map;//Item Data Map
@@ -143,5 +152,12 @@ public:
     QByteArray m_CustomCourseData;
 
     int items;
+
+
+    QString m_CaseIDMsg;
+
+    QString m_default;
+    QTreeWidgetItem *DefaultPtr=Q_NULLPTR;
+
 };
 #endif // QFLASHTREE_H

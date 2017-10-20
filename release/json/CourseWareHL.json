@@ -8,6 +8,7 @@
           {
             "Name": "听诊基础",
             "TreeDir": "/心脏听诊/听诊基础",
+			"Flash":"听诊基础.swf",
             "Courseware": [
               {
                 "Name": "心脏解剖",
@@ -18,6 +19,7 @@
                     "TreeDir": "/心脏听诊/听诊基础/心脏解剖/心脏的位置",
                     "Flash": "心脏的位置.swf",
                     "NetID": "48100",
+                    "CaseId": "0",
                     "defalut_sound": ""
                   },
                   {
@@ -25,6 +27,7 @@
                     "TreeDir": "/心脏听诊/听诊基础/心脏解剖/心脏的外形",
                     "Flash": "心脏的外形.swf",
                     "NetID": "48101",
+                    "CaseId": "0",
                     "defalut_sound": ""
                   },
                   {
@@ -32,6 +35,7 @@
                     "TreeDir": "/心脏听诊/听诊基础/心脏解剖/心脏内部结构",
                     "Flash": "心脏内部结构.swf",
                     "NetID": "48102",
+                    "CaseId": "0",
                     "defalut_sound": ""
                   },
                   {
@@ -39,6 +43,7 @@
                     "TreeDir": "/心脏听诊/听诊基础/心脏解剖/心脏的瓣膜",
                     "Flash": "心脏的瓣膜.swf",
                     "NetID": "48103",
+                    "CaseId": "0",
                     "defalut_sound": ""
                   },
                   {
@@ -46,6 +51,7 @@
                     "TreeDir": "/心脏听诊/听诊基础/心脏解剖/心脏传导系统",
                     "Flash": "心脏传导8.swf",
                     "NetID": "48105",
+                    "CaseId": "0",
                     "defalut_sound": ""
                   }
                 ]
@@ -59,6 +65,7 @@
                     "TreeDir": "/心脏听诊/听诊基础/心脏瓣膜听诊区/瓣膜解剖部位及瓣膜听诊区",
                     "Flash": "瓣膜解剖部位及瓣膜听诊区.swf",
                     "NetID": "48106",
+                    "CaseId": "0",
                     "defalut_sound": ""
                   },
                   {
@@ -66,6 +73,7 @@
                     "TreeDir": "/心脏听诊/听诊基础/心脏瓣膜听诊区/听诊顺序",
                     "Flash": "听诊顺序.swf",
                     "NetID": "48107",
+                    "CaseId": "0",
                     "defalut_sound": ""
                   },
                   {
@@ -73,6 +81,7 @@
                     "TreeDir": "/心脏听诊/听诊基础/心脏瓣膜听诊区/听诊方法",
                     "Flash": "听诊方法.swf",
                     "NetID": "48108",
+                    "CaseId": "0",
                     "defalut_sound": ""
                   }
                 ]
@@ -92,6 +101,7 @@
                         "TreeDir": "/心脏听诊/听诊基础/心动周期与心音产生的机理/心动周期中心音的变化/第一心音",
                         "Flash": "第一心音.swf",
                         "NetID": "48200",
+                        "CaseId": "81",
                         "defalut_sound": "1101.wav",
                         "sound_list": [
                           {
@@ -294,6 +304,7 @@
                         "TreeDir": "/心脏听诊/听诊基础/心动周期与心音产生的机理/心动周期中心音的变化/第二心音",
                         "Flash": "第二心音.swf",
                         "NetID": "48201",
+                        "CaseId": "80",
                         "defalut_sound": "1102.wav",
                         "sound_list": [
                           {
@@ -496,6 +507,7 @@
                         "TreeDir": "/心脏听诊/听诊基础/心动周期与心音产生的机理/心动周期中心音的变化/第三心音",
                         "Flash": "第三心音.swf",
                         "NetID": "48202",
+                        "CaseId": "79",
                         "defalut_sound": "1103.wav",
                         "sound_list": [
                           {
@@ -698,6 +710,7 @@
                         "TreeDir": "/心脏听诊/听诊基础/心动周期与心音产生的机理/心动周期中心音的变化/第四心音",
                         "Flash": "第四心音.swf",
                         "NetID": "48203",
+                        "CaseId": "78",
                         "defalut_sound": "1104.wav",
                         "sound_list": [
                           {
@@ -902,6 +915,7 @@
                     "TreeDir": "/心脏听诊/听诊基础/心动周期与心音产生的机理/血液循环系统",
                     "Flash": "血液循环系统.swf",
                     "NetID": "48109",
+                    "CaseId": "0",
                     "defalut_sound": ""
                   },
                   {
@@ -909,6 +923,7 @@
                     "TreeDir": "/心脏听诊/听诊基础/心动周期与心音产生的机理/心动周期",
                     "Flash": "心动周期.swf",
                     "NetID": "48110",
+                    "CaseId": "0",
                     "defalut_sound": ""
                   },
                   {
@@ -916,6 +931,7 @@
                     "TreeDir": "/心脏听诊/听诊基础/心动周期与心音产生的机理/正常心音图",
                     "Flash": "正常心音图.swf",
                     "NetID": "48112",
+                    "CaseId": "0",
                     "defalut_sound": ""
                   }
                 ]
@@ -935,6 +951,7 @@
                     "TreeDir": "/心脏听诊/心脏听诊/心率/窦性心动过速",
                     "Flash": "窦性心动过速.swf",
                     "NetID": "48113",
+                    "CaseId": "77",
                     "defalut_sound": "1105.wav",
                     "sound_list": [
                       {
@@ -1137,6 +1154,7 @@
                     "TreeDir": "/心脏听诊/心脏听诊/心率/窦性心动过缓",
                     "Flash": "窦性心动过缓.swf",
                     "NetID": "48114",
+                    "CaseId": "76",
                     "defalut_sound": "1116.wav",
                     "sound_list": [
                       {
@@ -1349,6 +1367,7 @@
                         "TreeDir": "/心脏听诊/心脏听诊/心律/期前收缩/频发室早",
                         "Flash": "频发室早.swf",
                         "NetID": "48205",
+                        "CaseId": "73",
                         "defalut_sound": "1118.wav",
                         "sound_list": [
                           {
@@ -1551,6 +1570,7 @@
                         "TreeDir": "/心脏听诊/心脏听诊/心律/期前收缩/二联律",
                         "Flash": "二联律.swf",
                         "NetID": "48206",
+                        "CaseId": "72",
                         "defalut_sound": "1119.wav",
                         "sound_list": [
                           {
@@ -1753,6 +1773,7 @@
                         "TreeDir": "/心脏听诊/心脏听诊/心律/期前收缩/三联律",
                         "Flash": "三联律.swf",
                         "NetID": "48207",
+                        "CaseId": "71",
                         "defalut_sound": "110.wav",
                         "sound_list": [
                           {
@@ -1957,6 +1978,7 @@
                     "TreeDir": "/心脏听诊/心脏听诊/心律/窦性心律不齐",
                     "Flash": "窦性心律不齐.swf",
                     "NetID": "48115",
+                    "CaseId": "75",
                     "defalut_sound": "1117.wav",
                     "sound_list": [
                       {
@@ -2159,6 +2181,7 @@
                     "TreeDir": "/心脏听诊/心脏听诊/心律/心房颤动",
                     "Flash": "心房颤动.swf",
                     "NetID": "48117",
+                    "CaseId": "74",
                     "defalut_sound": "111.wav",
                     "sound_list": [
                       {
@@ -2375,6 +2398,7 @@
                             "TreeDir": "/心脏听诊/心脏听诊/额外心音/舒张期额外心音/奔马律/舒张早期奔马律",
                             "Flash": "舒张早期奔马律.swf",
                             "NetID": "48309",
+                            "CaseId": "55",
                             "default_sound": "127.wav",
                             "sound_list": [
                               {
@@ -2577,6 +2601,7 @@
                             "TreeDir": "/心脏听诊/心脏听诊/额外心音/舒张期额外心音/奔马律/舒张晚期奔马律",
                             "Flash": "舒张晚期奔马律.swf",
                             "NetID": "48310",
+                            "CaseId": "54",
                             "default_sound": "128.wav",
                             "sound_list": [
                               {
@@ -2779,6 +2804,7 @@
                             "TreeDir": "/心脏听诊/心脏听诊/额外心音/舒张期额外心音/奔马律/重叠型奔马律",
                             "Flash": "重叠型奔马律.swf",
                             "NetID": "48311",
+                            "CaseId": "53",
                             "default_sound": "129.wav",
                             "sound_list": [
                               {
@@ -2983,6 +3009,7 @@
                         "TreeDir": "/心脏听诊/心脏听诊/额外心音/舒张期额外心音/开瓣音",
                         "Flash": "开瓣音.swf",
                         "NetID": "48215",
+                        "CaseId": "51",
                         "defalut_sound": "131.wav",
                         "sound_list": [
                           {
@@ -3185,6 +3212,7 @@
                         "TreeDir": "/心脏听诊/心脏听诊/额外心音/舒张期额外心音/心包叩击音",
                         "Flash": "心包叩击音.swf",
                         "NetID": "48216",
+                        "CaseId": "48",
                         "defalut_sound": "134.wav",
                         "sound_list": [
                           {
@@ -3407,6 +3435,7 @@
                         "TreeDir": "/心脏听诊/心脏听诊/额外心音/舒张期额外心音/肿瘤扑落音",
                         "Flash": "肿瘤扑落音.swf",
                         "NetID": "48217",
+                        "CaseId": "47",
                         "defalut_sound": "135.wav",
                         "sound_list": [
                           {
@@ -3627,6 +3656,7 @@
                             "TreeDir": "/心脏听诊/心脏听诊/额外心音/收缩期额外心音/收缩早期喷射音/肺动脉喷射音",
                             "Flash": "肺动脉喷射音.swf",
                             "NetID": "48312",
+                            "CaseId": "46",
                             "default_sound": "136.wav",
                             "sound_list": [
                               {
@@ -3829,6 +3859,7 @@
                             "TreeDir": "/心脏听诊/心脏听诊/额外心音/收缩期额外心音/收缩早期喷射音/主动脉喷射音",
                             "Flash": "主动脉喷射音.swf",
                             "NetID": "48313",
+                            "CaseId": "45",
                             "default_sound": "137.wav",
                             "sound_list": [
                               {
@@ -4041,6 +4072,7 @@
                         "TreeDir": "/心脏听诊/心脏听诊/额外心音/收缩期额外心音/收缩中﹑晚期喀喇音",
                         "Flash": "收缩中晚期喀喇音.swf",
                         "NetID": "48219",
+                        "CaseId": "44",
                         "defalut_sound": "138.wav",
                         "sound_list": [
                           {
@@ -4245,6 +4277,7 @@
                     "TreeDir": "/心脏听诊/心脏听诊/额外心音/医源性额外心音",
                     "Flash": "医源性额外音.swf",
                     "NetID": "48123",
+                    "CaseId": "0",
                     "defalut_sound": ""
                   },
                   {
@@ -4252,6 +4285,7 @@
                     "TreeDir": "/心脏听诊/心脏听诊/额外心音/三音律的鉴别听诊",
                     "Flash": "三音律的鉴别听诊.swf",
                     "NetID": "48124",
+                    "CaseId": "79",
                     "defalut_sound": "1103.wav",
                     "sound_list": [
                       {
@@ -4464,6 +4498,7 @@
                         "TreeDir": "/心脏听诊/心脏听诊/杂音/特性与听诊要点/最响部位和传导方向",
                         "Flash": "最响部位和传导方向.swf",
                         "NetID": "48222",
+                        "CaseId": "0",
                         "defalut_sound": ""
                       },
                       {
@@ -4471,6 +4506,7 @@
                         "TreeDir": "/心脏听诊/心脏听诊/杂音/特性与听诊要点/心动周期中的时期",
                         "Flash": "心动周期中的时期.swf",
                         "NetID": "48223",
+                        "CaseId": "0",
                         "defalut_sound": ""
                       },
                       {
@@ -4478,6 +4514,7 @@
                         "TreeDir": "/心脏听诊/心脏听诊/杂音/特性与听诊要点/性质",
                         "Flash": "性质.swf",
                         "NetID": "48224",
+                        "CaseId": "0",
                         "defalut_sound": ""
                       },
                       {
@@ -4485,6 +4522,7 @@
                         "TreeDir": "/心脏听诊/心脏听诊/杂音/特性与听诊要点/强度与形态",
                         "Flash": "强度与形态.swf",
                         "NetID": "48225",
+                        "CaseId": "0",
                         "defalut_sound": ""
                       },
                       {
@@ -4492,6 +4530,7 @@
                         "TreeDir": "/心脏听诊/心脏听诊/杂音/特性与听诊要点/体位、呼吸和运动对杂音的影响",
                         "Flash": "体位呼吸和运动对杂音的影响.swf",
                         "NetID": "48226",
+                        "CaseId": "0",
                         "defalut_sound": ""
                       }
                     ]
@@ -4513,6 +4552,7 @@
                                 "TreeDir": "/心脏听诊/心脏听诊/杂音/临床意义/收缩期杂音/肺动脉瓣区/先天性肺动脉瓣狭窄",
                                 "Flash": "先天性肺动脉瓣狭窄.swf",
                                 "NetID": "48404",
+                                "CaseId": "34",
                                 "default_sound": "146.wav",
                                 "sound_list": [
                                   {
@@ -4715,6 +4755,7 @@
                                 "TreeDir": "/心脏听诊/心脏听诊/杂音/临床意义/收缩期杂音/肺动脉瓣区/房间隔缺损",
                                 "Flash": "房间隔缺损.swf",
                                 "NetID": "48405",
+                                "CaseId": "32",
                                 "default_sound": "150.wav",
                                 "sound_list": [
                                   {
@@ -4921,6 +4962,7 @@
                                 "TreeDir": "/心脏听诊/心脏听诊/杂音/临床意义/收缩期杂音/肺动脉瓣区/法洛四联症",
                                 "Flash": "法洛四联症.swf",
                                 "NetID": "48406",
+                                "CaseId": "31",
                                 "default_sound": "149.wav",
                                 "sound_list": [
                                   {
@@ -5133,6 +5175,7 @@
                                 "TreeDir": "/心脏听诊/心脏听诊/杂音/临床意义/收缩期杂音/胸骨左缘三﹑四肋间/室间隔缺损",
                                 "Flash": "室间隔缺损.swf",
                                 "NetID": "48407",
+                                "CaseId": "30",
                                 "default_sound": "150.wav",
                                 "sound_list": [
                                   {
@@ -5339,6 +5382,7 @@
                                 "TreeDir": "/心脏听诊/心脏听诊/杂音/临床意义/收缩期杂音/胸骨左缘三﹑四肋间/室间隔穿孔",
                                 "Flash": "室间隔穿孔.swf",
                                 "NetID": "48408",
+                                "CaseId": "29",
                                 "default_sound": "151.wav",
                                 "sound_list": [
                                   {
@@ -5545,6 +5589,7 @@
                                 "TreeDir": "/心脏听诊/心脏听诊/杂音/临床意义/收缩期杂音/胸骨左缘三﹑四肋间/肥厚型梗阻性心肌病",
                                 "Flash": "肥厚型梗阻性心肌病.swf",
                                 "NetID": "48409",
+                                "CaseId": "28",
                                 "default_sound": "152.wav",
                                 "sound_list": [
                                   {
@@ -5753,6 +5798,7 @@
                             "TreeDir": "/心脏听诊/心脏听诊/杂音/临床意义/收缩期杂音/二尖瓣区",
                             "Flash": "二尖瓣区(收缩期).swf",
                             "NetID": "48314",
+                            "CaseId": "39",
                             "default_sound": "141.wav",
                             "sound_list": [
                               {
@@ -5975,6 +6021,7 @@
                             "TreeDir": "/心脏听诊/心脏听诊/杂音/临床意义/收缩期杂音/三尖瓣区",
                             "Flash": "三尖瓣区(收缩).swf",
                             "NetID": "48315",
+                            "CaseId": "37",
                             "default_sound": "143.wav",
                             "sound_list": [
                               {
@@ -6181,6 +6228,7 @@
                             "TreeDir": "/心脏听诊/心脏听诊/杂音/临床意义/收缩期杂音/主动脉瓣区",
                             "Flash": "主动脉瓣区(收缩期).swf",
                             "NetID": "48316",
+                            "CaseId": "36",
                             "default_sound": "144.wav",
                             "sound_list": [
                               {
@@ -6403,6 +6451,7 @@
                             "TreeDir": "/心脏听诊/心脏听诊/杂音/临床意义/收缩期杂音/生理性杂音",
                             "Flash": "生理性杂音.swf",
                             "NetID": "48319",
+                            "CaseId": "27",
                             "default_sound": "153.wav",
                             "sound_list": [
                               {
@@ -6623,6 +6672,7 @@
                                 "TreeDir": "/心脏听诊/心脏听诊/杂音/临床意义/舒张期杂音/二尖瓣区/器质性二尖瓣狭窄",
                                 "Flash": "器质性二尖瓣狭窄.swf",
                                 "NetID": "48410",
+                                "CaseId": "25",
                                 "default_sound": "154.wav",
                                 "sound_list": [
                                   {
@@ -6667,6 +6717,7 @@
                                 "TreeDir": "/心脏听诊/心脏听诊/杂音/临床意义/舒张期杂音/二尖瓣区/相对性二尖瓣狭窄",
                                 "Flash": "相对性二尖瓣狭窄.swf",
                                 "NetID": "48411",
+                                "CaseId": "24",
                                 "default_sound": "156.wav",
                                 "sound_list": [
                                   {
@@ -6875,6 +6926,7 @@
                                 "TreeDir": "/心脏听诊/心脏听诊/杂音/临床意义/舒张期杂音/主动脉瓣区/主动脉瓣关闭不全",
                                 "Flash": "主动脉瓣关闭不全.swf",
                                 "NetID": "48412",
+                                "CaseId": "22",
                                 "default_sound": "1106.wav",
                                 "sound_list": [
                                   {
@@ -6915,6 +6967,7 @@
                                 "TreeDir": "/心脏听诊/心脏听诊/杂音/临床意义/舒张期杂音/主动脉瓣区/主动脉瓣钙化",
                                 "Flash": "主动脉瓣钙化.swf",
                                 "NetID": "48413",
+                                "CaseId": "0",
                                 "default_sound": ""
                               },
                               {
@@ -6922,6 +6975,7 @@
                                 "TreeDir": "/心脏听诊/心脏听诊/杂音/临床意义/舒张期杂音/主动脉瓣区/主动脉瓣赘生物",
                                 "Flash": "主动脉瓣赘生物.swf",
                                 "NetID": "48414",
+                                "CaseId": "0",
                                 "default_sound": ""
                               }
                             ]
@@ -6931,6 +6985,7 @@
                             "TreeDir": "/心脏听诊/心脏听诊/杂音/临床意义/舒张期杂音/三尖瓣区",
                             "Flash": "房室传导阻滞.swf",
                             "NetID": "48321",
+                            "CaseId": "23",
                             "default_sound": "157.wav",
                             "sound_list": [
                               {
@@ -7137,6 +7192,7 @@
                             "TreeDir": "/心脏听诊/心脏听诊/杂音/临床意义/舒张期杂音/肺动脉瓣区",
                             "Flash": "预激综合征.swf",
                             "NetID": "48323",
+                            "CaseId": "21",
                             "default_sound": "159.wav",
                             "sound_list": [
                               {
@@ -7341,6 +7397,7 @@
                         "TreeDir": "/心脏听诊/心脏听诊/杂音/临床意义/连续性杂音",
                         "Flash": "连续性杂音.swf",
                         "NetID": "48229",
+                        "CaseId": "41",
                         "defalut_sound": "160.wav",
                         "sound_list": [
                           {
@@ -7545,6 +7602,7 @@
                     "TreeDir": "/心脏听诊/心脏听诊/杂音/产生的机制",
                     "Flash": "杂音产生的机制.swf",
                     "NetID": "48125",
+                    "CaseId": "0",
                     "defalut_sound": ""
                   }
                 ]
@@ -7562,6 +7620,7 @@
                         "TreeDir": "/心脏听诊/心脏听诊/少见心脏病/先天性心血管病/无分流",
                         "Flash": "无分流.swf",
                         "NetID": "48230",
+                        "CaseId": "18",
                         "defalut_sound": "163.wav",
                         "sound_list": [
                           {
@@ -7764,6 +7823,7 @@
                         "TreeDir": "/心脏听诊/心脏听诊/少见心脏病/先天性心血管病/有左至右分流",
                         "Flash": "有左至右分流.swf",
                         "NetID": "48231",
+                        "CaseId": "32",
                         "defalut_sound": "150.wav",
                         "sound_list": [
                           {
@@ -7970,6 +8030,7 @@
                         "TreeDir": "/心脏听诊/心脏听诊/少见心脏病/先天性心血管病/有右至左分流",
                         "Flash": "有右至左分流.swf",
                         "NetID": "48232",
+                        "CaseId": "31",
                         "defalut_sound": "149.wav",
                         "sound_list": [
                           {
@@ -8178,6 +8239,7 @@
                     "TreeDir": "/心脏听诊/心脏听诊/少见心脏病/其他少见心脏病",
                     "Flash": "其他少见心脏病.swf",
                     "NetID": "48129",
+                    "CaseId": "11",
                     "defalut_sound": "170.wav",
                     "sound_list": [
                       {
@@ -8394,6 +8456,7 @@
                             "TreeDir": "/心脏听诊/心脏听诊/心音/强度改变/第一心音/第一心音增强",
                             "Flash": "第一心音增强.swf",
                             "NetID": "48300",
+                            "CaseId": "70",
                             "default_sound": "112.wav",
                             "sound_list": [
                               {
@@ -8596,6 +8659,7 @@
                             "TreeDir": "/心脏听诊/心脏听诊/心音/强度改变/第一心音/第一心音减弱",
                             "Flash": "第一心音减弱.swf",
                             "NetID": "48301",
+                            "CaseId": "68",
                             "default_sound": "114.wav",
                             "sound_list": [
                               {
@@ -8798,6 +8862,7 @@
                             "TreeDir": "/心脏听诊/心脏听诊/心音/强度改变/第一心音/第一心音强弱不等",
                             "Flash": "第一心音强弱不等.swf",
                             "NetID": "48302",
+                            "CaseId": "67",
                             "default_sound": "115.wav",
                             "sound_list": [
                               {
@@ -9010,6 +9075,7 @@
                                 "TreeDir": "/心脏听诊/心脏听诊/心音/强度改变/第二心音/第二心音增强/主动脉瓣",
                                 "Flash": "主动脉瓣第二心音增强.swf",
                                 "NetID": "48400",
+                                "CaseId": "65",
                                 "default_sound": "117.wav",
                                 "sound_list": [
                                   {
@@ -9216,6 +9282,7 @@
                                 "TreeDir": "/心脏听诊/心脏听诊/心音/强度改变/第二心音/第二心音增强/肺动脉瓣",
                                 "Flash": "肺动脉瓣第二心音增强.swf",
                                 "NetID": "48401",
+                                "CaseId": "64",
                                 "default_sound": "118.wav",
                                 "sound_list": [
                                   {
@@ -9420,6 +9487,7 @@
                             "TreeDir": "/心脏听诊/心脏听诊/心音/强度改变/第二心音/第二心音减弱",
                             "Flash": "第二心音减弱",
                             "NetID": "48304",
+                            "CaseId": "63",
                             "default_sound": "119.wav",
                             "sound_list": [
                               {
@@ -9638,6 +9706,7 @@
                             "TreeDir": "/心脏听诊/心脏听诊/心音/心音分裂/S2分裂/生理性分裂",
                             "Flash": "生理性分裂.swf",
                             "NetID": "48305",
+                            "CaseId": "59",
                             "default_sound": "123.wav",
                             "sound_list": [
                               {
@@ -9840,6 +9909,7 @@
                             "TreeDir": "/心脏听诊/心脏听诊/心音/心音分裂/S2分裂/通常分裂",
                             "Flash": "通常分裂.swf",
                             "NetID": "48306",
+                            "CaseId": "58",
                             "default_sound": "124.wav",
                             "sound_list": [
                               {
@@ -10042,6 +10112,7 @@
                             "TreeDir": "/心脏听诊/心脏听诊/心音/心音分裂/S2分裂/固定分裂",
                             "Flash": "固定分裂.swf",
                             "NetID": "48307",
+                            "CaseId": "57",
                             "default_sound": "125.wav",
                             "sound_list": [
                               {
@@ -10244,6 +10315,7 @@
                             "TreeDir": "/心脏听诊/心脏听诊/心音/心音分裂/S2分裂/反常分裂",
                             "Flash": "反常分裂.swf",
                             "NetID": "48308",
+                            "CaseId": "56",
                             "default_sound": "126.wav",
                             "sound_list": [
                               {
@@ -10448,6 +10520,7 @@
                         "TreeDir": "/心脏听诊/心脏听诊/心音/心音分裂/S1分裂",
                         "Flash": "S1分裂.swf",
                         "NetID": "48212",
+                        "CaseId": "60",
                         "defalut_sound": "122.wav",
                         "sound_list": [
                           {
@@ -10652,6 +10725,7 @@
                     "TreeDir": "/心脏听诊/心脏听诊/心音/性质改变",
                     "Flash": "性质改变.swf",
                     "NetID": "48119",
+                    "CaseId": "61",
                     "defalut_sound": "121.wav",
                     "sound_list": [
                       {
@@ -10856,6 +10930,7 @@
                 "TreeDir": "/心脏听诊/心脏听诊/心包摩擦音",
                 "Flash": "心包摩擦音.swf",
                 "NetID": "48058",
+                "CaseId": "20",
                 "defalut_sound": "161.wav",
                 "sound_list": [
                   {
@@ -11090,6 +11165,7 @@
                 "TreeDir": "/肺部听诊/听诊基础/肺的体表投影",
                 "Flash": "肺的体表投影.swf",
                 "NetID": "48070",
+                "CaseId": "0",
                 "defalut_sound": ""
               },
               {
@@ -11097,6 +11173,7 @@
                 "TreeDir": "/肺部听诊/听诊基础/肺的解剖",
                 "Flash": "胸部正常实体解剖.swf",
                 "NetID": "48071",
+                "CaseId": "0",
                 "defalut_sound": ""
               },
               {
@@ -11104,6 +11181,7 @@
                 "TreeDir": "/肺部听诊/听诊基础/肺内气管的分布",
                 "Flash": "肺内气管的分布.swf",
                 "NetID": "48072",
+                "CaseId": "0",
                 "defalut_sound": ""
               },
               {
@@ -11111,6 +11189,7 @@
                 "TreeDir": "/肺部听诊/听诊基础/肺泡的结构和功能",
                 "Flash": "肺泡的结构和功能.swf",
                 "NetID": "48073",
+                "CaseId": "0",
                 "defalut_sound": ""
               },
               {
@@ -11118,6 +11197,7 @@
                 "TreeDir": "/肺部听诊/听诊基础/胸膜腔的结构",
                 "Flash": "胸膜腔的结构.swf",
                 "NetID": "48074",
+                "CaseId": "0",
                 "defalut_sound": ""
               },
               {
@@ -11125,6 +11205,7 @@
                 "TreeDir": "/肺部听诊/听诊基础/正常呼吸音的听诊部位",
                 "Flash": "正常呼吸音的听诊部位.swf",
                 "NetID": "48075",
+                "CaseId": "0",
                 "defalut_sound": ""
               },
               {
@@ -11132,6 +11213,7 @@
                 "TreeDir": "/肺部听诊/听诊基础/肺的运动",
                 "Flash": "肺的运动.swf",
                 "NetID": "48076",
+                "CaseId": "0",
                 "defalut_sound": ""
               },
               {
@@ -11139,6 +11221,7 @@
                 "TreeDir": "/肺部听诊/听诊基础/肺的影像学表现",
                 "Flash": "肺的影像学表现.swf",
                 "NetID": "48077",
+                "CaseId": "0",
                 "defalut_sound": ""
               }
             ]
@@ -11160,6 +11243,7 @@
                         "TreeDir": "/肺部听诊/肺部听诊/正常呼吸音/支气管呼吸音/儿童",
                         "Flash": "儿童支气管呼吸音.swf",
                         "NetID": "48601",
+                        "CaseId": "171",
                         "defalut_sound": "9.wav",
                         "sound_list": [
                           {
@@ -11374,6 +11458,7 @@
                         "TreeDir": "/肺部听诊/肺部听诊/正常呼吸音/支气管呼吸音/老年",
                         "Flash": "老年支气管呼吸音.swf",
                         "NetID": "48602",
+                        "CaseId": "170",
                         "defalut_sound": "8.wav",
                         "sound_list": [
                           {
@@ -11404,6 +11489,7 @@
                         "TreeDir": "/肺部听诊/肺部听诊/正常呼吸音/肺泡呼吸音/儿童",
                         "Flash": "儿童肺泡呼吸音.swf",
                         "NetID": "48604",
+                        "CaseId": "169",
                         "defalut_sound": "3.wav",
                         "sound_list": [
                           {
@@ -11618,6 +11704,7 @@
                         "TreeDir": "/肺部听诊/肺部听诊/正常呼吸音/肺泡呼吸音/老年",
                         "Flash": "老年肺泡呼吸音.swf",
                         "NetID": "48605",
+                        "CaseId": "168",
                         "defalut_sound": "2.wav",
                         "sound_list": [
                           {
@@ -11838,6 +11925,7 @@
                         "TreeDir": "/肺部听诊/肺部听诊/正常呼吸音/支气管肺泡呼吸音/儿童",
                         "Flash": "儿童支气管肺泡呼吸音.swf",
                         "NetID": "48608",
+                        "CaseId": "167",
                         "defalut_sound": "9.wav",
                         "sound_list": [
                           {
@@ -12052,6 +12140,7 @@
                         "TreeDir": "/肺部听诊/肺部听诊/正常呼吸音/支气管肺泡呼吸音/老年",
                         "Flash": "老年支气管肺泡呼吸音.swf",
                         "NetID": "48609",
+                        "CaseId": "166",
                         "defalut_sound": "5.wav",
                         "sound_list": [
                           {
@@ -12112,6 +12201,7 @@
                     "TreeDir": "/肺部听诊/肺部听诊/呼吸频率/正常呼吸",
                     "Flash": "正常呼吸音.swf",
                     "NetID": "48503",
+                    "CaseId": "165",
                     "defalut_sound": "10.wav",
                     "sound_list": [
                       {
@@ -12330,6 +12420,7 @@
                     "TreeDir": "/肺部听诊/肺部听诊/呼吸频率/呼吸过速",
                     "Flash": "呼吸过速.swf",
                     "NetID": "48504",
+                    "CaseId": "164",
                     "defalut_sound": "11.wav",
                     "sound_list": [
                       {
@@ -12548,6 +12639,7 @@
                     "TreeDir": "/肺部听诊/肺部听诊/呼吸频率/呼吸过缓",
                     "Flash": "呼吸过缓.swf",
                     "NetID": "48506",
+                    "CaseId": "163",
                     "defalut_sound": "12.wav",
                     "sound_list": [
                       {
@@ -12766,6 +12858,7 @@
                     "TreeDir": "/肺部听诊/肺部听诊/呼吸频率/库什摩呼吸",
                     "Flash": "库什摩.swf",
                     "NetID": "48509",
+                    "CaseId": "162",
                     "defalut_sound": "13.wav",
                     "sound_list": [
                       {
@@ -12990,6 +13083,7 @@
                     "TreeDir": "/肺部听诊/肺部听诊/呼吸节律/潮式呼吸",
                     "Flash": "潮式呼吸.swf",
                     "NetID": "48510",
+                    "CaseId": "161",
                     "defalut_sound": "14.wav",
                     "sound_list": [
                       {
@@ -13208,6 +13302,7 @@
                     "TreeDir": "/肺部听诊/肺部听诊/呼吸节律/间停呼吸",
                     "Flash": "渐停呼吸.swf",
                     "NetID": "48511",
+                    "CaseId": "160",
                     "defalut_sound": "15.wav",
                     "sound_list": [
                       {
@@ -13426,6 +13521,7 @@
                     "TreeDir": "/肺部听诊/肺部听诊/呼吸节律/叹气样呼吸",
                     "Flash": "叹气样呼吸.swf",
                     "NetID": "48513",
+                    "CaseId": "159",
                     "defalut_sound": "16.wav",
                     "sound_list": [
                       {
@@ -13658,6 +13754,7 @@
                             "TreeDir": "/肺部听诊/肺部听诊/异常呼吸音/异常肺泡呼吸音/肺泡呼吸音增强/呼吸深快",
                             "Flash": "呼吸深快.swf",
                             "NetID": "48700",
+                            "CaseId": "158",
                             "default_sound": "20.wav",
                             "sound_list": [
                               {
@@ -13876,6 +13973,7 @@
                             "TreeDir": "/肺部听诊/肺部听诊/异常呼吸音/异常肺泡呼吸音/肺泡呼吸音增强/呼吸减慢",
                             "Flash": "呼吸减慢.swf",
                             "NetID": "48701",
+                            "CaseId": "157",
                             "default_sound": "21.wav",
                             "sound_list": [
                               {
@@ -14094,6 +14192,7 @@
                             "TreeDir": "/肺部听诊/肺部听诊/异常呼吸音/异常肺泡呼吸音/肺泡呼吸音增强/气胸呼吸音增强",
                             "Flash": "气胸呼吸音增强.swf",
                             "NetID": "48702",
+                            "CaseId": "156",
                             "default_sound": "23.wav",
                             "sound_list": [
                               {
@@ -14318,6 +14417,7 @@
                             "TreeDir": "/肺部听诊/肺部听诊/异常呼吸音/异常肺泡呼吸音/肺泡呼吸音增强/胸腔积液呼吸音增强",
                             "Flash": "胸腔积液呼吸音增强.swf",
                             "NetID": "48888",
+                            "CaseId": "155",
                             "default_sound": "22.wav",
                             "sound_list": [
                               {
@@ -14524,6 +14624,7 @@
                             "TreeDir": "/肺部听诊/肺部听诊/异常呼吸音/异常肺泡呼吸音/肺泡呼吸音减弱或消失/肺泡呼吸音减弱(例1)",
                             "Flash": "呼吸音减弱.swf",
                             "NetID": "48703",
+                            "CaseId": "151",
                             "default_sound": "18.wav",
                             "sound_list": [
                               {
@@ -14766,6 +14867,7 @@
                             "TreeDir": "/肺部听诊/肺部听诊/异常呼吸音/异常肺泡呼吸音/断续性呼吸/肺结核",
                             "Flash": "断续性呼吸音( 例 1).swf",
                             "NetID": "48707",
+                            "CaseId": "152",
                             "default_sound": "24.wav",
                             "sound_list": [
                               {
@@ -14980,6 +15082,7 @@
                             "TreeDir": "/肺部听诊/肺部听诊/异常呼吸音/异常肺泡呼吸音/断续性呼吸/肺炎",
                             "Flash": "断续性呼吸音2.swf",
                             "NetID": "48708",
+                            "CaseId": "150",
                             "default_sound": "25.wav",
                             "sound_list": [
                               {
@@ -15212,6 +15315,7 @@
                             "TreeDir": "/肺部听诊/肺部听诊/异常呼吸音/异常肺泡呼吸音/断续性呼吸/断续性呼吸音( 例 2)",
                             "Flash": "断续性呼吸音( 例 2).swf",
                             "NetID": "48899",
+                            "CaseId": "150",
                             "default_sound": "25.wav",
                             "sound_list": [
                               {
@@ -15452,6 +15556,7 @@
                             "TreeDir": "/肺部听诊/肺部听诊/异常呼吸音/异常肺泡呼吸音/粗糙性呼吸音/支气管炎早期",
                             "Flash": "粗糙性呼吸音(例 1 ).swf",
                             "NetID": "48709",
+                            "CaseId": "148",
                             "default_sound": "27.wav",
                             "sound_list": [
                               {
@@ -15678,6 +15783,7 @@
                             "TreeDir": "/肺部听诊/肺部听诊/异常呼吸音/异常支气管呼吸音/肺组织实变/大叶性肺炎",
                             "Flash": "肺组织实变(例 1).swf",
                             "NetID": "48900",
+                            "CaseId": "146",
                             "default_sound": "29.wav",
                             "sound_list": [
                               {
@@ -15898,6 +16004,7 @@
                             "TreeDir": "/肺部听诊/肺部听诊/异常呼吸音/异常支气管呼吸音/肺内大空腔/肺内大空腔(例１)",
                             "Flash": "肺内大空腔(例１).swf",
                             "NetID": "48901",
+                            "CaseId": "144",
                             "default_sound": "30.wav",
                             "sound_list": [
                               {
@@ -16120,6 +16227,7 @@
                         "TreeDir": "/肺部听诊/肺部听诊/异常呼吸音/异常支气管呼吸音/压迫性肺不张",
                         "Flash": "压迫性肺不张.swf",
                         "NetID": "48617",
+                        "CaseId": "143",
                         "defalut_sound": "31.wav",
                         "sound_list": [
                           {
@@ -16320,6 +16428,7 @@
                             "TreeDir": "/肺部听诊/肺部听诊/异常呼吸音/异常支气管肺泡呼吸音/肺小实变/肺小实变(例１)",
                             "Flash": "肺小实变(例１).swf",
                             "NetID": "48903",
+                            "CaseId": "141",
                             "default_sound": "33.wav",
                             "sound_list": [
                               {
@@ -16540,6 +16649,7 @@
                             "TreeDir": "/肺部听诊/肺部听诊/异常呼吸音/异常支气管肺泡呼吸音/深部肺实变/深部肺实变(例１)",
                             "Flash": "深部肺实变(例１).swf",
                             "NetID": "48902",
+                            "CaseId": "139",
                             "default_sound": "35.wav",
                             "sound_list": [
                               {
@@ -16782,6 +16892,7 @@
                                 "TreeDir": "/肺部听诊/肺部听诊/附加音/湿罗音/粗湿罗音/响亮性粗湿罗音/支气管扩张并右下肺感染",
                                 "Flash": "响亮性粗湿罗音(例１).swf",
                                 "NetID": "48950",
+                                "CaseId": "135",
                                 "default_sound": "37.wav",
                                 "sound_list": [
                                   {
@@ -17004,6 +17115,7 @@
                                 "TreeDir": "/肺部听诊/肺部听诊/附加音/湿罗音/粗湿罗音/非响亮性粗湿罗/支气管扩张",
                                 "Flash": "非响亮性粗湿罗音(例１).swf",
                                 "NetID": "48951",
+                                "CaseId": "133",
                                 "default_sound": "38.wav",
                                 "sound_list": [
                                   {
@@ -17230,6 +17342,7 @@
                             "TreeDir": "/肺部听诊/肺部听诊/附加音/湿罗音/粗湿罗音/儿童粗湿罗音",
                             "Flash": "儿童粗湿罗音.swf",
                             "NetID": "48712",
+                            "CaseId": "132",
                             "default_sound": "73.wav",
                             "sound_list": [
                               {
@@ -17460,6 +17573,7 @@
                                 "TreeDir": "/肺部听诊/肺部听诊/附加音/湿罗音/中湿罗音/响亮中湿罗音/支气管肺炎",
                                 "Flash": "响亮性中湿罗音(例１).swf",
                                 "NetID": "48905",
+                                "CaseId": "128",
                                 "default_sound": "40.wav",
                                 "sound_list": [
                                   {
@@ -17676,6 +17790,7 @@
                             "TreeDir": "/肺部听诊/肺部听诊/附加音/湿罗音/中湿罗音/非响亮性中湿罗音",
                             "Flash": "非响亮性中湿罗音.swf",
                             "NetID": "48715",
+                            "CaseId": "134",
                             "default_sound": "41.wav",
                             "sound_list": [
                               {
@@ -17904,6 +18019,7 @@
                             "TreeDir": "/肺部听诊/肺部听诊/附加音/湿罗音/中湿罗音/儿童中湿罗音",
                             "Flash": "儿童中湿罗音.swf",
                             "NetID": "48716",
+                            "CaseId": "131",
                             "default_sound": "42.wav",
                             "sound_list": [
                               {
@@ -18128,6 +18244,7 @@
                                 "TreeDir": "/肺部听诊/肺部听诊/附加音/湿罗音/细湿罗音/响亮性细湿罗音/响亮性小湿啰音(例１)",
                                 "Flash": "响亮性小湿罗音(例1 ).swf",
                                 "NetID": "48906",
+                                "CaseId": "126",
                                 "default_sound": "44.wav",
                                 "sound_list": [
                                   {
@@ -18350,6 +18467,7 @@
                             "TreeDir": "/肺部听诊/肺部听诊/附加音/湿罗音/细湿罗音/非响亮性小湿罗音",
                             "Flash": "非响亮性小湿罗音.swf",
                             "NetID": "48718",
+                            "CaseId": "124",
                             "default_sound": "45.wav",
                             "sound_list": [
                               {
@@ -18578,6 +18696,7 @@
                             "TreeDir": "/肺部听诊/肺部听诊/附加音/湿罗音/细湿罗音/儿童小湿罗音",
                             "Flash": "儿童小湿罗音.swf",
                             "NetID": "48719",
+                            "CaseId": "129",
                             "default_sound": "46.wav",
                             "sound_list": [
                               {
@@ -18800,6 +18919,7 @@
                             "TreeDir": "/肺部听诊/肺部听诊/附加音/湿罗音/捻发音/肺淤血",
                             "Flash": "捻发音(例１).swf",
                             "NetID": "48720",
+                            "CaseId": "138",
                             "default_sound": "47.wav",
                             "sound_list": [
                               {
@@ -18994,6 +19114,7 @@
                             "TreeDir": "/肺部听诊/肺部听诊/附加音/湿罗音/Velcro啰音/弥漫性肺间质纤维化",
                             "Flash": "velcro 罗音(例1).swf",
                             "NetID": "48904",
+                            "CaseId": "137",
                             "default_sound": "48.wav",
                             "sound_list": [
                               {
@@ -19222,6 +19343,7 @@
                                 "TreeDir": "/肺部听诊/肺部听诊/附加音/干罗音/高调干罗音/哨笛音/哨笛音(例 1)",
                                 "Flash": "哨笛音(例 1).swf",
                                 "NetID": "48910",
+                                "CaseId": "123",
                                 "default_sound": "49.wav",
                                 "sound_list": [
                                   {
@@ -19454,6 +19576,7 @@
                                 "TreeDir": "/肺部听诊/肺部听诊/附加音/干罗音/高调干罗音/鸟鸣音/鸟鸣音(例1)",
                                 "Flash": "慢性支气管炎.swf",
                                 "NetID": "48912",
+                                "CaseId": "119",
                                 "default_sound": "52.wav",
                                 "sound_list": [
                                   {
@@ -19682,6 +19805,7 @@
                                 "TreeDir": "/肺部听诊/肺部听诊/附加音/干罗音/高调干罗音/双相性哮鸣音/双相哮鸣音(例 1)",
                                 "Flash": "双相哮鸣音(例 1).swf",
                                 "NetID": "48911",
+                                "CaseId": "115",
                                 "default_sound": "55.wav",
                                 "sound_list": [
                                   {
@@ -19888,6 +20012,7 @@
                             "TreeDir": "/肺部听诊/肺部听诊/附加音/干罗音/高调干罗音/飞箭音",
                             "Flash": "飞箭音.swf",
                             "NetID": "48722",
+                            "CaseId": "121",
                             "default_sound": "50.wav",
                             "sound_list": [
                               {
@@ -20108,6 +20233,7 @@
                             "TreeDir": "/肺部听诊/肺部听诊/附加音/干罗音/高调干罗音/吸气哮鸣音",
                             "Flash": "吸气相哮鸣音.swf",
                             "NetID": "48723",
+                            "CaseId": "118",
                             "default_sound": "54.wav",
                             "sound_list": [
                               {
@@ -20284,6 +20410,7 @@
                             "TreeDir": "/肺部听诊/肺部听诊/附加音/干罗音/高调干罗音/呼气性哮鸣音",
                             "Flash": "呼气相哮鸣音.swf",
                             "NetID": "48724",
+                            "CaseId": "117",
                             "default_sound": "53.wav",
                             "sound_list": [
                               {
@@ -20488,6 +20615,7 @@
                             "TreeDir": "/肺部听诊/肺部听诊/附加音/干罗音/高调干罗音/喘鸣(成人)",
                             "Flash": "成人喘鸣.swf",
                             "NetID": "48726",
+                            "CaseId": "114",
                             "default_sound": "59.wav",
                             "sound_list": [
                               {
@@ -20692,6 +20820,7 @@
                             "TreeDir": "/肺部听诊/肺部听诊/附加音/干罗音/高调干罗音/喘鸣(小儿)",
                             "Flash": "小儿喘鸣.swf",
                             "NetID": "48727",
+                            "CaseId": "113",
                             "default_sound": "60.wav",
                             "sound_list": [
                               {
@@ -20878,6 +21007,7 @@
                             "TreeDir": "/肺部听诊/肺部听诊/附加音/干罗音/高调干罗音/儿童哮鸣音",
                             "Flash": "儿童哮鸣音.swf",
                             "NetID": "48728",
+                            "CaseId": "130",
                             "default_sound": "103.wav",
                             "sound_list": [
                               {
@@ -21082,6 +21212,7 @@
                             "TreeDir": "/肺部听诊/肺部听诊/附加音/干罗音/高调干罗音/小儿喉鸣",
                             "Flash": "小儿喉鸣.swf",
                             "NetID": "48977",
+                            "CaseId": "112",
                             "default_sound": "58.wav",
                             "sound_list": [
                               {
@@ -21274,6 +21405,7 @@
                             "TreeDir": "/肺部听诊/肺部听诊/附加音/干罗音/低调干罗音/鼾音",
                             "Flash": "鼾音.swf",
                             "NetID": "48729",
+                            "CaseId": "111",
                             "default_sound": "61.wav",
                             "sound_list": [
                               {
@@ -21494,6 +21626,7 @@
                             "TreeDir": "/肺部听诊/肺部听诊/附加音/干罗音/低调干罗音/狮吼音",
                             "Flash": "狮吼音.swf",
                             "NetID": "48730",
+                            "CaseId": "110",
                             "default_sound": "62.wav",
                             "sound_list": [
                               {
@@ -21698,6 +21831,7 @@
                         "TreeDir": "/肺部听诊/肺部听诊/语音共振/语音共振正常/气管听诊区",
                         "Flash": "气管听诊区.swf",
                         "NetID": "48732",
+                        "CaseId": "109",
                         "defalut_sound": "64.wav",
                         "sound_list": [
                           {
@@ -21902,6 +22036,7 @@
                         "TreeDir": "/肺部听诊/肺部听诊/语音共振/语音共振正常/支气管肺泡听诊区",
                         "Flash": "支气管肺泡听诊区.swf",
                         "NetID": "48733",
+                        "CaseId": "108",
                         "defalut_sound": "82.wav",
                         "sound_list": [
                           {
@@ -22110,6 +22245,7 @@
                         "TreeDir": "/肺部听诊/肺部听诊/语音共振/语音共振正常/肺泡听诊区",
                         "Flash": "肺泡听诊区.swf",
                         "NetID": "48734",
+                        "CaseId": "107",
                         "defalut_sound": "81.wav",
                         "sound_list": [
                           {
@@ -22324,6 +22460,7 @@
                         "TreeDir": "/肺部听诊/肺部听诊/语音共振/语音共振增强/支气管语音",
                         "Flash": "支气管语音.swf",
                         "NetID": "48629",
+                        "CaseId": "105",
                         "defalut_sound": "66.wav",
                         "sound_list": [
                           {
@@ -22548,6 +22685,7 @@
                         "TreeDir": "/肺部听诊/肺部听诊/语音共振/语音共振增强/胸语音",
                         "Flash": "胸语音.swf",
                         "NetID": "48630",
+                        "CaseId": "104",
                         "defalut_sound": "67.wav",
                         "sound_list": [
                           {
@@ -22772,6 +22910,7 @@
                         "TreeDir": "/肺部听诊/肺部听诊/语音共振/语音共振增强/羊鸣音",
                         "Flash": "羊鸣音.swf",
                         "NetID": "48631",
+                        "CaseId": "103",
                         "defalut_sound": "68.wav",
                         "sound_list": [
                           {
@@ -22950,6 +23089,7 @@
                         "TreeDir": "/肺部听诊/肺部听诊/语音共振/语音共振增强/正常耳语音",
                         "Flash": "正常耳语音.swf",
                         "NetID": "48735",
+                        "CaseId": "102",
                         "defalut_sound": "69.wav",
                         "sound_list": [
                           {
@@ -23164,6 +23304,7 @@
                         "TreeDir": "/肺部听诊/肺部听诊/语音共振/语音共振增强/耳语音增强",
                         "Flash": "耳语音增强.swf",
                         "NetID": "48736",
+                        "CaseId": "101",
                         "defalut_sound": "70.wav",
                         "sound_list": [
                           {
@@ -23380,6 +23521,7 @@
                     "TreeDir": "/肺部听诊/肺部听诊/语音共振/语音共振减弱",
                     "Flash": "语音共振减弱.swf",
                     "NetID": "48520",
+                    "CaseId": "106",
                     "defalut_sound": "83.wav",
                     "sound_list": [
                       {
@@ -23590,6 +23732,7 @@
                 "TreeDir": "/肺部听诊/肺部听诊/肺部听诊注意事项",
                 "Flash": "肺部听诊注意事项.swf",
                 "NetID": "48078",
+                "CaseId": "0",
                 "defalut_sound": ""
               },
               {
@@ -23597,6 +23740,7 @@
                 "TreeDir": "/肺部听诊/肺部听诊/胸膜摩擦",
                 "Flash": "胸膜摩擦音.swf",
                 "NetID": "48085",
+                "CaseId": "100",
                 "defalut_sound": "71.wav",
                 "sound_list": [
                   {
@@ -23785,6 +23929,7 @@
                 "TreeDir": "/肺部听诊/鉴别听诊/鉴别听诊/正常肺泡呼吸音与正常支气管呼吸音",
                 "Flash": "鉴别听诊1.swf",
                 "NetID": "48522",
+                "CaseId": "99",
                 "defalut_sound": "1.wav",
                 "sound_list": [
                   {
@@ -23953,6 +24098,7 @@
                 "TreeDir": "/肺部听诊/鉴别听诊/鉴别听诊/正常肺泡呼吸音与正常支气管肺泡呼吸音",
                 "Flash": "鉴别听诊2.swf",
                 "NetID": "48523",
+                "CaseId": "98",
                 "defalut_sound": "1.wav",
                 "sound_list": [
                   {
@@ -24121,6 +24267,7 @@
                 "TreeDir": "/肺部听诊/鉴别听诊/鉴别听诊/正常肺泡呼吸音与肺泡呼吸音增粗",
                 "Flash": "鉴别听诊4.swf",
                 "NetID": "48524",
+                "CaseId": "97",
                 "defalut_sound": "19.wav",
                 "sound_list": [
                   {
@@ -24289,6 +24436,7 @@
                 "TreeDir": "/肺部听诊/鉴别听诊/鉴别听诊/正常支气管呼吸音与正常支气音",
                 "Flash": "鉴别听诊3.swf",
                 "NetID": "48525",
+                "CaseId": "96",
                 "defalut_sound": "7.wav",
                 "sound_list": [
                   {
@@ -24469,6 +24617,7 @@
                 "TreeDir": "/肺部听诊/鉴别听诊/鉴别听诊/肺实变管状呼吸音与空瓮状管状呼吸",
                 "Flash": "鉴别听诊19.swf",
                 "NetID": "48527",
+                "CaseId": "95",
                 "defalut_sound": "48.wav",
                 "sound_list": [
                   {
@@ -24637,6 +24786,7 @@
                 "TreeDir": "/肺部听诊/鉴别听诊/鉴别听诊/非响亮性大水泡音与非响亮性中水泡音",
                 "Flash": "鉴别听诊9.swf",
                 "NetID": "48529",
+                "CaseId": "94",
                 "defalut_sound": "38.wav",
                 "sound_list": [
                   {
@@ -24805,6 +24955,7 @@
                 "TreeDir": "/肺部听诊/鉴别听诊/鉴别听诊/响亮性中湿罗音与响亮性小湿罗音",
                 "Flash": "鉴别听诊10.swf",
                 "NetID": "48530",
+                "CaseId": "93",
                 "defalut_sound": "39.wav",
                 "sound_list": [
                   {
@@ -24973,6 +25124,7 @@
                 "TreeDir": "/肺部听诊/鉴别听诊/鉴别听诊/正常肺泡呼吸音与肺泡呼吸音粗糙",
                 "Flash": "鉴别听诊5.swf",
                 "NetID": "48531",
+                "CaseId": "92",
                 "defalut_sound": "26.wav",
                 "sound_list": [
                   {
@@ -25141,6 +25293,7 @@
                 "TreeDir": "/肺部听诊/鉴别听诊/鉴别听诊/肺实变管状呼吸音与空瓮状管状呼吸",
                 "Flash": "鉴别听诊6.swf",
                 "NetID": "48532",
+                "CaseId": "91",
                 "defalut_sound": "28.wav",
                 "sound_list": [
                   {
@@ -25309,6 +25462,7 @@
                 "TreeDir": "/肺部听诊/鉴别听诊/鉴别听诊/湿啰音与干啰音",
                 "Flash": "鉴别听诊7.swf",
                 "NetID": "48533",
+                "CaseId": "83",
                 "defalut_sound": "87.wav",
                 "sound_list": [
                   {
@@ -25357,6 +25511,7 @@
                 "TreeDir": "/肺部听诊/鉴别听诊/鉴别听诊/响亮性粗湿罗音与响亮性中湿罗音",
                 "Flash": "鉴别听诊8.swf",
                 "NetID": "48534",
+                "CaseId": "90",
                 "defalut_sound": "36.wav",
                 "sound_list": [
                   {
@@ -25481,6 +25636,7 @@
                 "TreeDir": "/肺部听诊/鉴别听诊/鉴别听诊/非响亮性中湿罗音与响亮性小湿罗音",
                 "Flash": "鉴别听诊11.swf",
                 "NetID": "48535",
+                "CaseId": "89",
                 "defalut_sound": "41.wav",
                 "sound_list": [
                   {
@@ -25605,6 +25761,7 @@
                 "TreeDir": "/肺部听诊/鉴别听诊/鉴别听诊/单一性音调哮鸣音与多音调哮鸣音",
                 "Flash": "鉴别听诊15.swf",
                 "NetID": "48536",
+                "CaseId": "84",
                 "defalut_sound": "86.wav",
                 "sound_list": [
                   {
@@ -25653,6 +25810,7 @@
                 "TreeDir": "/肺部听诊/鉴别听诊/鉴别听诊/吸气性哮鸣音与呼气性哮鸣音",
                 "Flash": "鉴别听诊16.swf",
                 "NetID": "48537",
+                "CaseId": "88",
                 "defalut_sound": "54.wav",
                 "sound_list": [
                   {
@@ -25821,6 +25979,7 @@
                 "TreeDir": "/肺部听诊/鉴别听诊/鉴别听诊/干啰音与胸膜摩擦音",
                 "Flash": "鉴别听诊15.swf",
                 "NetID": "48538",
+                "CaseId": "86",
                 "defalut_sound": "84.wav",
                 "sound_list": [
                   {
@@ -25869,6 +26028,7 @@
                 "TreeDir": "/肺部听诊/鉴别听诊/鉴别听诊/细湿罗音与胸膜摩擦音",
                 "Flash": "鉴别听诊18.swf",
                 "NetID": "48539",
+                "CaseId": "85",
                 "defalut_sound": "85.wav",
                 "sound_list": [
                   {

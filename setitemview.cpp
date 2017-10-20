@@ -145,7 +145,7 @@ void SetItemView::onOkbtn()
     }
     if(reloadTime!=0)
     {
-        emit pattern(QString("InitChange"));
+//        emit pattern(QString("InitChange"));
         emit reloadProcess();
     }
 }

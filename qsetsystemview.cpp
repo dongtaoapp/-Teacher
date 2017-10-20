@@ -13,7 +13,7 @@ QSetSystemView::QSetSystemView(QWidget *parent) :
     this->setWindowFlags(Qt::FramelessWindowHint);//È¥µô±êÌâÀ¸
     ViewInit();
     connect(ui->listWidget,SIGNAL(itemClicked(QListWidgetItem *)),this,SLOT(onMYItemclicked(QListWidgetItem*)));
-    connect(setView,SIGNAL(pattern(QString)),this,SIGNAL(pattern(QString)));
+//    connect(setView,SIGNAL(pattern(QString)),this,SIGNAL(pattern(QString)));
 }
 QSetSystemView::~QSetSystemView()
 {

@@ -141,10 +141,10 @@ LoginForm::LoginForm(QWidget *parent) :
 
 LoginForm::~LoginForm()
 {
-    if(loadingmove!=Q_NULLPTR)
-    {
-        delete loadingmove;
-    }
+//    if(loadingmove!=Q_NULLPTR)
+//    {
+//        delete loadingmove;
+//    }
     delete ui;
     qDebug()<<__FUNCTION__;
 }

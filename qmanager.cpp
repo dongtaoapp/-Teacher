@@ -7,7 +7,7 @@ QManager::QManager()
 
     islisten=false;
 
-    tm.start(1000);
+    tm.start(2000);
     this->managerInit();
     connect(&m_server,SIGNAL(NotifyClientConnected(int,int)),this,SIGNAL(ClientState(int,int)));
     connect(this,SIGNAL(startspeak()),&m_speak,SLOT(start_audio_to_system()));
@@ -19,7 +19,7 @@ QManager::QManager()
 }
 QManager::~QManager()
 {
-    qDebug()<<__FUNCTION__;
+//    qDebug()<<__FUNCTION__;
 }
 
 void QManager::managerInit()
@@ -27,10 +27,10 @@ void QManager::managerInit()
     m_server.setserverlisten(666666);
 }
 
-void QManager::pattern(QString str)
-{
-    m_server.ALLTeacherPatter(str);
-}
+//void QManager::pattern(QString str)
+//{
+//    m_server.ALLTeacherPatter(str);
+//}
 ///************老师机speak初始化**************/
 void QManager::speakAndlistenInit()
 {
@@ -78,26 +78,32 @@ void QManager::startAllTeach(bool cmd)
 {
     m_server.startAllTeach(cmd);
 }
+
 void QManager::AllTeachActionTab(int tab)
 {
     m_server.ALLTeachActionTab(tab);
 }
+
 void QManager::AllTeachActionBtn(QString &action)
 {
     m_server.ALLTeachActionBtn(action);
 }
+
 void QManager::AllTeachActionDiffItem(QString &ID)
 {
     m_server.ALLTeachActionDiffItem(ID);
 }
+
 void QManager::AllTeachActionDiffItemDelete(QString &index)
 {
     m_server.ALLTeachActionDiffItemDelete(index);
 }
+
 void QManager::AllTeachActionDiffItemlOAD()
 {
     m_server.ALLTeachActionDiffItemLoad();
 }
+
 void QManager::ALLTeachLocalFlash(QString &FileName)
 {
     m_server.ALLTrachLocalFlash(FileName);

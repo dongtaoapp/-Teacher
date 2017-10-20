@@ -56,6 +56,12 @@ QPushButton#ok_btn{
     border-style:none;
     background-color:#4aabe9;
 }
+QPushButton#cancel_btn{
+    font-size:14px;
+    color:white;
+    border-style:none;
+    background-color:#4aabe9;
+}
 QScrollArea:bar {
       border: 14px solid red;
       background: #32CC99;
